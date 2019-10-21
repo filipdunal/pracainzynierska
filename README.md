@@ -1,1 +1,2 @@
 # pracainzynierska
+elo xd
