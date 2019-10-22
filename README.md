@@ -1,2 +1,0 @@
-# pracainzynierska
-elo xd
