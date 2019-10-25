@@ -16,6 +16,7 @@ public class ConnectionDetailsOpener : MonoBehaviour
 
     }
 
+
     private void Start()
     {
         ani = GetComponent<Animator>();

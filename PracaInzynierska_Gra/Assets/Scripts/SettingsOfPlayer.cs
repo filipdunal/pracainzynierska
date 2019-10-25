@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SettingsOfPlayer : MonoBehaviour
 {
-    public static string nick;
+    public static string nick="Player";
     public static int lastUsedNetworkPort = 25000;
-    public static bool firstTime;
+    public static bool firstTime=true;
 }

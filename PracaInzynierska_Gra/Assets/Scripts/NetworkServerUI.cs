@@ -12,16 +12,18 @@ public class NetworkServerUI : MonoBehaviour
     public static bool isConnected;
     private void OnGUI()
     {
-        /*
         string ipaddress = LocalIPAddress();
         GUI.Box(new Rect(10, Screen.height - 50, 100, 50), ipaddress);
         GUI.Label(new Rect(20, Screen.height - 35, 100, 20), "Status:" + NetworkServer.active);
         GUI.Label(new Rect(20, Screen.height - 20, 100, 20), "Connected:" + NetworkServer.connections.Count);
-        */
     }
     private void Start()
     {
-        NetworkServer.Reset();
+        if(!NetworkServer.active)
+        {
+            ServerStart();
+        }
+        
     }
 
     public void ServerStart()

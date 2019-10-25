@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ConnectionDetailsOpener.cs" />
     <Compile Include="Assets\Scripts\NetworkServerUI.cs" />
+    <Compile Include="Assets\Scripts\RefreshServer.cs" />
     <Compile Include="Assets\Scripts\SettingsOfPlayer.cs" />
     <Compile Include="Assets\Scripts\SwitchPages.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
