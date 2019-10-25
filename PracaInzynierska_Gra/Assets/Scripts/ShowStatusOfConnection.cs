@@ -28,7 +28,7 @@ public class ShowStatusOfConnection : MonoBehaviour
         }
 
         //Komputer podlaczony do sieci ale bez podlaczonego telefonu - zolty
-        if(!NetworkServer.localClientActive)
+        if(NetworkServer.connections.Count==0)
         {
             buttonImage.color = Color.yellow;
             buttonText.text = "No client connected";
