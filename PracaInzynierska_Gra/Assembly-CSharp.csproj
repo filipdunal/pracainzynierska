@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\NetworkServerUI.cs" />
     <Compile Include="Assets\Scripts\RefreshServer.cs" />
     <Compile Include="Assets\Scripts\SettingsOfPlayer.cs" />
+    <Compile Include="Assets\Scripts\ShowStatusOfConnection.cs" />
     <Compile Include="Assets\Scripts\SwitchPages.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Filip/Documents/GitHub/pracainzynierska/PracaInzynierska_Gra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

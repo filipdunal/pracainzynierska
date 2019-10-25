@@ -9,28 +9,59 @@ using UnityEngine.Networking.NetworkSystem;
 
 public class NetworkServerUI : MonoBehaviour
 {
-    public static bool isConnected;
+    //public static bool isConnected;
+    static string ipaddress;
     private void OnGUI()
     {
-        string ipaddress = LocalIPAddress();
+        //Only for testing
+        ipaddress = LocalIPAddress();
         GUI.Box(new Rect(10, Screen.height - 50, 100, 50), ipaddress);
         GUI.Label(new Rect(20, Screen.height - 35, 100, 20), "Status:" + NetworkServer.active);
         GUI.Label(new Rect(20, Screen.height - 20, 100, 20), "Connected:" + NetworkServer.connections.Count);
     }
     private void Start()
     {
-        if(!NetworkServer.active)
+        ipaddress = LocalIPAddress();
+        if (!NetworkServer.active)
         {
             ServerStart();
         }
-        
+    }
+    private void Update()
+    {
+        ipaddress = LocalIPAddress();
+        if (!IsConnectedToNetwork())
+        {
+            if(NetworkServer.active)
+            {
+                Debug.Log("Reset of server");
+                NetworkServer.Reset();
+            }     
+        }
+        else
+        {
+            if(!NetworkServer.active)
+            {
+                Start();
+            }
+        }
     }
 
-    public void ServerStart()
+    static bool IsConnectedToNetwork()
     {
-        NetworkServer.Reset();
-        NetworkServer.Listen(SettingsOfPlayer.lastUsedNetworkPort);
+        if (ipaddress[0] == '1' && ipaddress[1] == '2' && ipaddress[2] == '7')
+            return false;
+        else
+            return true;
+    }
 
+    public static void ServerStart()
+    {
+        if(IsConnectedToNetwork())
+        {
+            NetworkServer.Reset();
+            NetworkServer.Listen(SettingsOfPlayer.lastUsedNetworkPort);
+        }
     }
     public static string LocalIPAddress()
     {

@@ -10,7 +10,12 @@ public class RefreshServer : MonoBehaviour
 {
     public Button thisButton;
     public InputField portInputField;
+    public Text IPText;
 
+    private void OnGUI()
+    {
+        IPText.text = NetworkServerUI.LocalIPAddress();
+    }
     private void Start()
     {
         portInputField.text = SettingsOfPlayer.lastUsedNetworkPort.ToString();
@@ -22,7 +27,7 @@ public class RefreshServer : MonoBehaviour
         if(int.TryParse(portInputField.text, out intToSend))
         {
             SettingsOfPlayer.lastUsedNetworkPort = intToSend;
-            NetworkServer.Listen(SettingsOfPlayer.lastUsedNetworkPort);
+            NetworkServerUI.ServerStart();
         }
         else
         {
