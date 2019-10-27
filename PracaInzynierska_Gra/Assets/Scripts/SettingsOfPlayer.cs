@@ -9,6 +9,7 @@ public class SettingsOfPlayer: MonoBehaviour
     public static string nick="*Player";
     public static int lastUsedNetworkPort = 25000;
     public static bool firstTime=true;
+    public static int unlockedChapter = 1;
 
     private void Awake()
     {

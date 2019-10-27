@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ScenesScipt : MonoBehaviour
 {
-    void SwitchToScene(string name)
+    public void SwitchToScene(string name)
     {
+        //Async loading goes here in future
         SceneManager.LoadScene(name);
     }
 }
