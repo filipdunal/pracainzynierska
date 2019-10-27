@@ -60,8 +60,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ControlScript.cs" />
     <Compile Include="Assets\Scripts\NetworkClientUI.cs" />
-    <Compile Include="Assets\Scripts\NetworkServerUI.cs" />
     <Compile Include="Assets\Scripts\PanelMainOpener.cs" />
     <Compile Include="Assets\Scripts\PanelMainScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

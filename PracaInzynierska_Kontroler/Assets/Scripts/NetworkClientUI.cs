@@ -106,6 +106,16 @@ public class NetworkClientUI : MonoBehaviour
         client.Disconnect();
     }
 
+    static public void SendToPC(string message)
+    {
+        if(client.isConnected)
+        {
+            StringMessage messg = new StringMessage();
+            messg.value = message;
+            client.Send(999, messg);
+        }
+    }
+
 
     public string LocalIPAddress()
     {
@@ -121,11 +131,6 @@ public class NetworkClientUI : MonoBehaviour
             }
         }
         return "error";
-    }
-
-    public static void SendData(float x, float y, float z, float w, bool buttonPressed)
-    {
-
     }
 
 }

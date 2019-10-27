@@ -5,12 +5,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.Networking.NetworkSystem;
+using UnityStandardAssets.CrossPlatformInput;
 #pragma warning disable 0618 
 
 public class NetworkServerUI : MonoBehaviour
 {
-    //public static bool isConnected;
     static string ipaddress;
+
+    //Received data from mobile phone 
+    public static string receivedString;
+
     private void OnGUI()
     {
         //Only for testing
@@ -61,8 +65,18 @@ public class NetworkServerUI : MonoBehaviour
         {
             NetworkServer.Reset();
             NetworkServer.Listen(SettingsOfPlayer.lastUsedNetworkPort);
+            NetworkServer.RegisterHandler(999, ServerReceiveMessage);
         }
     }
+    private static void ServerReceiveMessage(NetworkMessage message)
+    {
+        StringMessage messg = new StringMessage();
+        messg.value = message.ReadMessage<StringMessage>().value;
+        string data = messg.value;
+        receivedString = data;
+    }
+
+
     public static string LocalIPAddress()
     {
         IPHostEntry host;
