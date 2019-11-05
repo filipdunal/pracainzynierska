@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -985,7 +985,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1246744570}
-        m_MethodName: actionClicked
+        m_MethodName: ActionClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1628,8 +1628,8 @@ CanvasGroup:
   m_GameObject: {fileID: 981277558}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &981277564
 MonoBehaviour:
@@ -2321,7 +2321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebac7ace7aa974c4ab74cca563524303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionClicked: 0
 --- !u!4 &1246744571
 Transform:
   m_ObjectHideFlags: 0

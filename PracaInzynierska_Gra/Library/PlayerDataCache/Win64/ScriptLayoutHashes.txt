@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Filip/Documents/Praca inzynierska builds/Build05/PracaInzynierska_Gra.exe
+C:/Users/Filip/Documents/Praca inzynierska builds/Build34/PracaInzynierska_Gra.exe
 SceneListBegin?
 Assets/Scenes/mainMenu.unity
 Assets/Scenes/chapter01.unity
@@ -101,7 +101,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-30c36d2c7f7bec7cc982febd8878d6fc Assembly-CSharp.dll:.PlayerSteeringScript
+4e00f6a8ab38f7e94f89d22d1454711c Assembly-CSharp.dll:.PlayerSteeringScript
 4e9333594897a1fb8b136ad2eae996c7 Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -166,6 +166,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 507174d46dacbc5fe45e28485db5dd1e Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 219ec6059796d8951d2adcd8505d0dc2 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
+83e769eee07fc231384c812eedbb8224 Assembly-CSharp.dll:.TurnOnPlayerObject
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SettingsOfPlayer
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 df434544c9f7b33d1cc7e635b180d279 Unity.TextMeshPro.dll:TMPro.TextMeshPro

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ControlScript : MonoBehaviour
 {
-    public bool actionClicked;
-    char actionClickedChar;
+    int actionClicked=0;
     Quaternion gyroAtt;
     Vector3 gyroAttEuler;
 
@@ -21,14 +20,14 @@ public class ControlScript : MonoBehaviour
 
     string message;
 
-    public void actionClick()
+    public void ActionClick()
     {
-        actionClicked = true;
+        actionClicked++;
     }
     private void Start()
     {
-        QualitySettings.vSyncCount = 0;    //Turn off V Sync to unlock frames
-        Application.targetFrameRate = 600; //To send as many messages as possible
+        //QualitySettings.vSyncCount = 0;    //Turn off V Sync to unlock frames
+        //Application.targetFrameRate = 600; //To send as many messages as possible
         Input.gyro.enabled = true;
     }
 
@@ -40,16 +39,8 @@ public class ControlScript : MonoBehaviour
         x = gyroAttEuler.x;
         y = gyroAttEuler.y;
         z = gyroAttEuler.z;
-
-        xs = System.Math.Round(x, 3).ToString();
-        ys = System.Math.Round(y, 3).ToString();
-        zs = System.Math.Round(z, 3).ToString();
-
-        if(actionClicked)   actionClickedChar = '1';
-        else                actionClickedChar = '0';
-
-        message = xs + "|" + ys + "|" + zs + "|" + actionClickedChar;
+       
+        message = (int)x + "|" + (int)y + "|" + (int)z + "|" + actionClicked;
         NetworkClientUI.SendToPC(message);
-        actionClicked = false;
     }
 }
