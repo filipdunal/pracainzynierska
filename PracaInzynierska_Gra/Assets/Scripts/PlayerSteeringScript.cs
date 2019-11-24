@@ -9,6 +9,11 @@ public class PlayerSteeringScript : MonoBehaviour
     public Text yText;
     public Text zText;
     public Text actionClickedText;
+
+    public Slider sliderX;
+    public Slider sliderY;
+    public Slider sliderZ;
+
     string[] messageValue;
 
     int x;
@@ -26,21 +31,24 @@ public class PlayerSteeringScript : MonoBehaviour
         xText.text = "X: "+x.ToString();
         yText.text = "Y: "+y.ToString();
         zText.text = "Z: "+z.ToString();
-        //actionClickedText.text = "Action: "+actionClickedCount;
         actionClickedText.text = "Action: "+actionClicked.ToString();
     }
 
     private void Update()
     {
         //Get values and assign them
-        messageValue = NetworkServerUI.receivedString.Split('|');
-        x = int.Parse(messageValue[0]);
-        y = int.Parse(messageValue[1]);
-        z = int.Parse(messageValue[2]);
-        actionClicked = int.Parse(messageValue[3]);
-        //if ((int)messageValue[3][0]==(int)'1') actionClickedText.text="XD";
-        
-        //x = x - xOffset;
+        if(NetworkServerUI.receivedString!=null)
+        {
+            messageValue = NetworkServerUI.receivedString.Split('|');
+            x = int.Parse(messageValue[0]);
+            y = int.Parse(messageValue[1]);
+            z = int.Parse(messageValue[2]);
 
+            sliderX.value = x / (float)360.0;
+            sliderY.value = y / (float)360;
+            sliderZ.value = z / (float)360;
+
+            actionClicked = int.Parse(messageValue[3]);
+        }
     }
 }

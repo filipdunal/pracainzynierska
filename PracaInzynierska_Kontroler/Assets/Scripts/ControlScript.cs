@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ControlScript : MonoBehaviour
 {
@@ -20,6 +21,18 @@ public class ControlScript : MonoBehaviour
 
     string message;
 
+    public Text textX;
+    public Text textY;
+    public Text textZ;
+
+    private void OnGUI()
+    {
+        textX.text = x.ToString();
+        textY.text = y.ToString();
+        textZ.text = z.ToString();
+
+    }
+
     public void ActionClick()
     {
         actionClicked++;
@@ -33,13 +46,20 @@ public class ControlScript : MonoBehaviour
 
     public void Update()
     {
-
+        /*
         gyroAtt = Input.gyro.attitude;
         gyroAttEuler = gyroAtt.eulerAngles;
+        
         x = gyroAttEuler.x;
         y = gyroAttEuler.y;
         z = gyroAttEuler.z;
-       
+        */
+        gyroAtt = Input.gyro.attitude;
+        x = gyroAtt.x;
+        y = gyroAtt.y;
+        z = gyroAtt.z;
+
+
         message = (int)x + "|" + (int)y + "|" + (int)z + "|" + actionClicked;
         NetworkClientUI.SendToPC(message);
     }
