@@ -60,10 +60,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ControlScript.cs" />
+    <Compile Include="Assets\Scripts\CameraRay.cs" />
+    <Compile Include="Assets\Scripts\GyroControl.cs" />
+    <Compile Include="Assets\Scripts\MessagingScript.cs" />
     <Compile Include="Assets\Scripts\NetworkClientUI.cs" />
     <Compile Include="Assets\Scripts\PanelMainOpener.cs" />
     <Compile Include="Assets\Scripts\PanelMainScript.cs" />
+    <Compile Include="Assets\Scripts\ShowDebugging.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Filip/Documents/GitHub/pracainzynierska/PracaInzynierska_Kontroler/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
