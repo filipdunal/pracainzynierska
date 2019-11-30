@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\PanelMainOpener.cs" />
     <Compile Include="Assets\Scripts\PanelMainScript.cs" />
     <Compile Include="Assets\Scripts\ShowDebugging.cs" />
+    <Compile Include="Assets\Scripts\SliderScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Filip/Documents/GitHub/pracainzynierska/PracaInzynierska_Kontroler/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

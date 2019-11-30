@@ -2,36 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class PlayerSteeringScript : MonoBehaviour
 {
-    public Text xText;
-    public Text yText;
-    public Text zText;
-    public Text actionClickedText;
-
-    public Slider sliderX;
-    public Slider sliderY;
-    public Slider sliderZ;
-
     string[] messageValue;
 
-    int x;
-    int y;
-    int z;
-    int actionClicked;
-    int actionClickedCount;
+    //Received values
+    float x=0f;
+    float y=0f;
+    int numberOfShots=0;
+    int powerOfShot=0;
+
+    public Text numShots;
+    public GameObject celownik;
+    RectTransform rtCelownik;
+   
     private void Start()
     {
-        actionClicked = 0;
-        actionClickedCount = 0;
-    }
-    private void OnGUI()
-    {
-        xText.text = "X: "+x.ToString();
-        yText.text = "Y: "+y.ToString();
-        zText.text = "Z: "+z.ToString();
-        actionClickedText.text = "Action: "+actionClicked.ToString();
+        rtCelownik = celownik.GetComponent<RectTransform>();
     }
 
     private void Update()
@@ -40,15 +29,35 @@ public class PlayerSteeringScript : MonoBehaviour
         if(NetworkServerUI.receivedString!=null)
         {
             messageValue = NetworkServerUI.receivedString.Split('|');
-            x = int.Parse(messageValue[0]);
-            y = int.Parse(messageValue[1]);
-            z = int.Parse(messageValue[2]);
+            //0 - x
+            //1 - y
+            //2 - number of shots
+            //3 - power of shot
 
-            sliderX.value = x / (float)360.0;
-            sliderY.value = y / (float)360;
-            sliderZ.value = z / (float)360;
+            if(numberOfShots!= int.Parse(messageValue[2]))
+            {
+                numShots.text = "Nr: " + numberOfShots + " Power: " + int.Parse(messageValue[3]);
+            }
 
-            actionClicked = int.Parse(messageValue[3]);
+            x = float.Parse(messageValue[0],System.Globalization.CultureInfo.InvariantCulture);
+            y = float.Parse(messageValue[1], System.Globalization.CultureInfo.InvariantCulture);
+            numberOfShots = int.Parse(messageValue[2]);
+            powerOfShot = int.Parse(messageValue[3]);
+            Aim();
         }
+    }
+
+    void Aim()
+    {
+        Vector2 v = new Vector2();
+
+        //rtCelownik.offsetMax.x
+        //rtCelownik.offsetMax.y
+        v.x = x;
+        v.y = y;
+        Debug.Log(v.x);
+
+        rtCelownik.anchoredPosition = v;
+
     }
 }

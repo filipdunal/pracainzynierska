@@ -11,12 +11,7 @@ public class GyroControl : MonoBehaviour
     public GameObject cameraObject;
     Quaternion rot;
     float offset=0f;
-
-    public Text wynik;
-    private void OnGUI()
-    {
-        wynik.text = cameraObject.transform.localRotation.eulerAngles.z.ToString();
-    }
+    
 
     private void Start()
     {
