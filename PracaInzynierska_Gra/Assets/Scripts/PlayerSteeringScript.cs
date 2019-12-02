@@ -17,10 +17,15 @@ public class PlayerSteeringScript : MonoBehaviour
     public Text numShots;
     public GameObject celownik;
     RectTransform rtCelownik;
-   
+    public GameObject cursorCanvas;
+    RectTransform rtCursorCanvas;
+    public float lerpStrength = 0.5f;
+
+
     private void Start()
     {
         rtCelownik = celownik.GetComponent<RectTransform>();
+        rtCursorCanvas = cursorCanvas.GetComponent<RectTransform>();
     }
 
     private void Update()
@@ -50,14 +55,13 @@ public class PlayerSteeringScript : MonoBehaviour
     void Aim()
     {
         Vector2 v = new Vector2();
-
-        //rtCelownik.offsetMax.x
-        //rtCelownik.offsetMax.y
-        v.x = x;
-        v.y = y;
+        
+        v.x = (rtCursorCanvas.rect.width / 2) *x/100;
+        v.y = (rtCursorCanvas.rect.height / 2) * y / 100;
         Debug.Log(v.x);
 
-        rtCelownik.anchoredPosition = v;
+        
+        rtCelownik.anchoredPosition=Vector2.Lerp(rtCelownik.anchoredPosition,v,lerpStrength);
 
     }
 }

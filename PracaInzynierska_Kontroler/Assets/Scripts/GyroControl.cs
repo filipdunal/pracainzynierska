@@ -11,6 +11,8 @@ public class GyroControl : MonoBehaviour
     public GameObject cameraObject;
     Quaternion rot;
     float offset=0f;
+
+    public Text debugText;
     
 
     private void Start()
@@ -42,6 +44,7 @@ public class GyroControl : MonoBehaviour
         {
             cameraObject.transform.localRotation = gyro.attitude * rot;
         }
+        
     }
 
     public void CalibrateGyro()
