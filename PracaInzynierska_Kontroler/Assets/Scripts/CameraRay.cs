@@ -17,19 +17,19 @@ public class CameraRay : MonoBehaviour
     private void Start()
     {
         Renderer rend = quad.GetComponent<Renderer>();
-        vertMax = rend.bounds.max.z;
+        vertMax = rend.bounds.max.y;
         horMax = rend.bounds.max.x;
     }
     private void Update()
     {
         RaycastHit hit;
-        Ray forwardRay = new Ray(myCamera.transform.position, myCamera.transform.forward);
+        Ray forwardRay = new Ray(myCamera.transform.position, myCamera.transform.up);
         if (Physics.Raycast(forwardRay, out hit, 100f))
         {
-            if(hit.collider.name=="Shooting Target Quad")
+            if(hit.collider.name=="Shooting Target Quad (1)")
             {
                 //wynik.text = "X: " + (int)hit.point.x + " Z: " + (int)hit.point.z;
-                GetCordInPercent(hit.point.x,hit.point.z);
+                GetCordInPercent(hit.point.x,hit.point.y);
                 wynik.text = "X: "+(int)cords.x +" Y: "+(int)cords.y;
             }
             else
@@ -39,10 +39,10 @@ public class CameraRay : MonoBehaviour
         }
     }
 
-    void GetCordInPercent(float x, float z)
+    void GetCordInPercent(float x, float y)
     {
         cords.x =100f*x/vertMax;
-        cords.y =100f*z/horMax;
+        cords.y =100f*y/horMax;
 
         cords.x = (float)System.Math.Round(cords.x, 1);
         cords.y = (float)System.Math.Round(cords.y, 1);

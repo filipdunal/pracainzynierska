@@ -10,11 +10,11 @@ public class PanelMainScript : MonoBehaviour
     {
         if(NetworkClientUI.isConnected)
         {
-            covering.SetActive(false);
+            //covering.SetActive(false);
         }
         else
         {
-            covering.SetActive(true);
+            //covering.SetActive(true);
         }
     }
 }
