@@ -33,6 +33,7 @@ public class PlayerSteeringScript : MonoBehaviour
         //Get values and assign them
         if(NetworkServerUI.receivedString!=null)
         {
+            Debug.Log("Message received");
             messageValue = NetworkServerUI.receivedString.Split('|');
             //0 - x
             //1 - y
@@ -58,10 +59,9 @@ public class PlayerSteeringScript : MonoBehaviour
         
         v.x = (rtCursorCanvas.rect.width / 2) *x/100;
         v.y = (rtCursorCanvas.rect.height / 2) * y / 100;
-        Debug.Log(v.x);
 
-        
         rtCelownik.anchoredPosition=Vector2.Lerp(rtCelownik.anchoredPosition,v,lerpStrength);
+        
 
     }
 }
