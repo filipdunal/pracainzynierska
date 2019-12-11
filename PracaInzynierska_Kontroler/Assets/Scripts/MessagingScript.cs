@@ -13,7 +13,8 @@ public class MessagingScript : MonoBehaviour
     float x;
     float y;
     int powerOfShot = 0;
-    int numberOfShots = 0;
+    int countedFire = 0;
+    int countedPause = 0;
 
     private void Start()
     {
@@ -26,13 +27,11 @@ public class MessagingScript : MonoBehaviour
         y = cameraRay.GetComponent<CameraRay>().cords[1];
         powerOfShot = (int)sl.value;
 
-        message = x + "|" + y + "|" + numberOfShots +  "|" +powerOfShot;
+        message = x + "|" + y + "|" + countedFire +  "|" +countedPause + "|" + powerOfShot;
         NetworkClientUI.SendToPC(message);
     }
 
-    public void Shot()
-    {
-        numberOfShots++;
-    }
+    public void Shot() => countedFire++;
+    public void SwitchPause() => countedPause++;
     
 }

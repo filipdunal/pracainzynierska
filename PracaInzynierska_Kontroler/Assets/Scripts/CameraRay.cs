@@ -41,8 +41,9 @@ public class CameraRay : MonoBehaviour
 
     void GetCordInPercent(float x, float y)
     {
-        cords.x =100f*x/vertMax;
-        cords.y =100f*y/horMax;
+        //Cords with center in left top corner and only positive values
+        cords.x =((100f*x/vertMax)+100f)/2f;
+        cords.y = 100f - ((100f * y / horMax) + 100f) / 2f ;
 
         cords.x = (float)System.Math.Round(cords.x, 1);
         cords.y = (float)System.Math.Round(cords.y, 1);

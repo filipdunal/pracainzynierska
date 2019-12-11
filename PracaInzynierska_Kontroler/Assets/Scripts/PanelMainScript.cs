@@ -14,7 +14,7 @@ public class PanelMainScript : MonoBehaviour
         }
         else
         {
-            covering.SetActive(true);
+            covering.SetActive(false);
         }
     }
 }

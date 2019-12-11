@@ -28,7 +28,7 @@ public class SliderScript : MonoBehaviour
 
     private void Update()
     {
-        float myHeight = transform.parent.parent.GetComponent<RectTransform>().rect.height;
-        GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, myHeight / 2f);
+        //float myHeight = transform.parent.parent.GetComponent<RectTransform>().rect.height;
+        //GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, myHeight / 2f);
     }
 }

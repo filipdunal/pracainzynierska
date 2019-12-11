@@ -60,16 +60,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AxisSteeringScript.cs" />
     <Compile Include="Assets\Scripts\ConnectionDetailsOpener.cs" />
+    <Compile Include="Assets\Scripts\CustomInputModule.cs" />
     <Compile Include="Assets\Scripts\NetworkServerUI.cs" />
-    <Compile Include="Assets\Scripts\PlayerSteeringScript.cs" />
+    <Compile Include="Assets\Scripts\OneSteeringScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerSteeringScript (old way).cs" />
     <Compile Include="Assets\Scripts\RefreshServer.cs" />
     <Compile Include="Assets\Scripts\ScenesScipt.cs" />
     <Compile Include="Assets\Scripts\SettingsOfPlayer.cs" />
     <Compile Include="Assets\Scripts\ShowStatusOfConnection.cs" />
     <Compile Include="Assets\Scripts\SwitchPages.cs" />
     <Compile Include="Assets\Scripts\TurnOnPlayerObject.cs" />
-    <Compile Include="Assets\Scripts\UISteeringScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Filip/Documents/GitHub/pracainzynierska/PracaInzynierska_Gra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
