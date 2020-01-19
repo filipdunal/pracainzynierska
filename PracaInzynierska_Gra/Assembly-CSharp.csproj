@@ -63,6 +63,8 @@
     <Compile Include="Assets\Scripts\AxisSteeringScript.cs" />
     <Compile Include="Assets\Scripts\ConnectionDetailsOpener.cs" />
     <Compile Include="Assets\Scripts\CustomInputModule.cs" />
+    <Compile Include="Assets\Scripts\Enemies\MonsterScript.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Spawning.cs" />
     <Compile Include="Assets\Scripts\NetworkServerUI.cs" />
     <Compile Include="Assets\Scripts\OneSteeringScript.cs" />
     <Compile Include="Assets\Scripts\PlayerSteeringScript (old way).cs" />

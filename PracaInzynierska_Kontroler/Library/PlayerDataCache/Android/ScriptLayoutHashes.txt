@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Filip/Documents/Praca inzynierska builds/Kontroler17.apk
+C:/Users/Filip/Documents/Do CV/Praca Inzynierska Kontroler/Build/Kontroler.apk
 SceneListBegin?
 Assets/Scenes/controller.unity
 SceneListEnd?

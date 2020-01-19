@@ -167,7 +167,7 @@ public class CustomInputModule : PointerInputModule
                 else if(controller==Controller.gamepad)
                 {
                     cursorPosition += new Vector2(Input.GetAxisRaw("Horizontal") * 20, -Input.GetAxisRaw("Vertical") * 20);
-                    if(Input.GetKeyDown(KeyCode.K))
+                    if(Input.GetButtonDown("Fire2"))
                     {
                         SendMouseLeftclick();
                     }
