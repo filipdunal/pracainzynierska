@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Spawner
   - Piece
+  - CustomEventSystem
+  - Monster
   layers:
   - Default
   - TransparentFX

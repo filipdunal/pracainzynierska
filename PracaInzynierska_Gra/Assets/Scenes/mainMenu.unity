@@ -932,31 +932,6 @@ PrefabInstance:
       propertyPath: pixelSizeOfCursor
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6238059289578564862, guid: 75a5df51e2b2c164c800d0ef2696a4d6,
-        type: 3}
-      propertyPath: controller
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6238059289578564862, guid: 75a5df51e2b2c164c800d0ef2696a4d6,
-        type: 3}
-      propertyPath: durationOfFakeClick
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6238059289578564856, guid: 75a5df51e2b2c164c800d0ef2696a4d6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6238059289578564861, guid: 75a5df51e2b2c164c800d0ef2696a4d6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2798539920484709938, guid: 75a5df51e2b2c164c800d0ef2696a4d6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75a5df51e2b2c164c800d0ef2696a4d6, type: 3}
 --- !u!1001 &7228913691678869640

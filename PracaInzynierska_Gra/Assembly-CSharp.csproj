@@ -65,8 +65,12 @@
     <Compile Include="Assets\Scripts\CustomInputModule.cs" />
     <Compile Include="Assets\Scripts\Enemies\MonsterScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawning.cs" />
+    <Compile Include="Assets\Scripts\FirstPersonCameraScript.cs" />
+    <Compile Include="Assets\Scripts\GameOverScript.cs" />
     <Compile Include="Assets\Scripts\NetworkServerUI.cs" />
     <Compile Include="Assets\Scripts\OneSteeringScript.cs" />
+    <Compile Include="Assets\Scripts\PieceScript.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerSteeringScript (old way).cs" />
     <Compile Include="Assets\Scripts\RefreshServer.cs" />
     <Compile Include="Assets\Scripts\ScenesScipt.cs" />

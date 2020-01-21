@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 public class CustomInputModule : PointerInputModule
 {
     [HideInInspector] public static CustomInputModule instance;
-    protected override void Awake()
+    protected new void Awake()
     {
         if (instance == null)
         {
@@ -20,6 +20,7 @@ public class CustomInputModule : PointerInputModule
         }
         else if (instance != this)
         {
+            Debug.Log(gameObject.name);
             Destroy(gameObject);
         }
     }
@@ -115,7 +116,7 @@ public class CustomInputModule : PointerInputModule
 
     public Texture2D cursor;
     public Vector2 cursorPosition;
-    [HideInInspector] public Vector2 mousePos;
+    public static Vector2 mousePos;
     [HideInInspector] public static bool visible = true;
     protected override void Start()
     {
@@ -172,9 +173,9 @@ public class CustomInputModule : PointerInputModule
                         SendMouseLeftclick();
                     }
                 }
-                mousePos = new Vector2(cursorPosition.x, cursorPosition.y);
+                //mousePos = new Vector2(cursorPosition.x, cursorPosition.y);
 
-                //mousePos = new Vector2(cursorPosition.x, (cursorPosition.y - Screen.height) * -1);
+                mousePos = new Vector2(cursorPosition.x, (cursorPosition.y - Screen.height) * -1);
             }
         }
         else

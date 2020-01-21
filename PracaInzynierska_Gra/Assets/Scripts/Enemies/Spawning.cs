@@ -5,9 +5,11 @@ using UnityEngine;
 public class Spawning : MonoBehaviour
 {
     public Transform arena;
+    public List<GameObject> monsterPrefabs;
+
     List<GameObject> spawnPoints;
     List<GameObject> pieces;
-    public GameObject monsterPrefab;
+    
 
     private void Start()
     {
@@ -16,9 +18,17 @@ public class Spawning : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            SpawnMonster();
+            if (Random.value > 0.5f)
+            {
+                SpawnMonster(0);
+            }
+            else
+            {
+                SpawnMonster(1);
+            }
+               
         }
     }
 
@@ -30,16 +40,22 @@ public class Spawning : MonoBehaviour
         spawnPoints = new List<GameObject>();
         foreach(GameObject child in pieces)
         {
-            spawnPoints.Add(child.transform.Find("Spawner left down").gameObject);
-            spawnPoints.Add(child.transform.Find("Spawner right down").gameObject);
+            spawnPoints.Add(child.transform.GetChild(0).Find("Spawner left down").gameObject);
+            spawnPoints.Add(child.transform.GetChild(0).Find("Spawner right down").gameObject);
         }
     }
 
-    void SpawnMonster()
+    void SpawnMonster(int monsterID)
     {
         int randomSpawnNumber = Random.Range(0, spawnPoints.Count);
         Vector3 positionForSpawn = spawnPoints[randomSpawnNumber].transform.position;
-        GameObject enemy = Instantiate(monsterPrefab,positionForSpawn,Quaternion.identity) as GameObject;
+        GameObject enemy = Instantiate(monsterPrefabs[monsterID],positionForSpawn,Quaternion.identity,gameObject.transform) as GameObject;
+        BlinkPiece(spawnPoints[randomSpawnNumber].transform.parent.parent.gameObject);
+    }
+
+    void BlinkPiece(GameObject piece)
+    {
+        piece.GetComponent<PieceScript>().Blink();
     }
 
     private static int SortByName(GameObject o1, GameObject o2)
