@@ -10,7 +10,7 @@ Material:
   m_Name: Arena piece active
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -73,5 +73,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.9094448, b: 0, a: 0.8039216}
-    - _EmissionColor: {r: 78.79325, g: 63.652588, b: 0, a: 1}
+    - _Color: {r: 1, g: 0.9094448, b: 0, a: 1}
+    - _EmissionColor: {r: 2.828427, g: 0.16432069, b: 0, a: 1}

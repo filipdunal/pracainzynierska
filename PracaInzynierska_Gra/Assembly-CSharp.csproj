@@ -61,23 +61,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AxisSteeringScript.cs" />
-    <Compile Include="Assets\Scripts\ConnectionDetailsOpener.cs" />
+    <Compile Include="Assets\Scripts\Camera\FirstPersonCameraScript.cs" />
+    <Compile Include="Assets\Scripts\Connection with smartphone\NetworkServerUI.cs" />
+    <Compile Include="Assets\Scripts\Connection with smartphone\RefreshServer.cs" />
     <Compile Include="Assets\Scripts\CustomInputModule.cs" />
     <Compile Include="Assets\Scripts\Enemies\MonsterScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawning.cs" />
-    <Compile Include="Assets\Scripts\FirstPersonCameraScript.cs" />
-    <Compile Include="Assets\Scripts\GameOverScript.cs" />
-    <Compile Include="Assets\Scripts\NetworkServerUI.cs" />
     <Compile Include="Assets\Scripts\OneSteeringScript.cs" />
     <Compile Include="Assets\Scripts\PieceScript.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\PlayerSteeringScript (old way).cs" />
-    <Compile Include="Assets\Scripts\RefreshServer.cs" />
+    <Compile Include="Assets\Scripts\PlayerSteeringScript (obsolete).cs" />
     <Compile Include="Assets\Scripts\ScenesScipt.cs" />
     <Compile Include="Assets\Scripts\SettingsOfPlayer.cs" />
-    <Compile Include="Assets\Scripts\ShowStatusOfConnection.cs" />
-    <Compile Include="Assets\Scripts\SwitchPages.cs" />
-    <Compile Include="Assets\Scripts\TurnOnPlayerObject.cs" />
+    <Compile Include="Assets\Scripts\UI\ConnectionDetailsOpener.cs" />
+    <Compile Include="Assets\Scripts\UI\GameOverScript.cs" />
+    <Compile Include="Assets\Scripts\UI\ShowStatusOfConnection.cs" />
+    <Compile Include="Assets\Scripts\UI\SwitchPages.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Filip/Documents/GitHub/pracainzynierska/PracaInzynierska_Gra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
