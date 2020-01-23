@@ -64,7 +64,7 @@ public class NetworkServerUI : MonoBehaviour
         if(IsConnectedToNetwork())
         {
             NetworkServer.Reset();
-            NetworkServer.Listen(SettingsOfPlayer.lastUsedNetworkPort);
+            NetworkServer.Listen(SettingsOfUser.lastUsedNetworkPort);
             NetworkServer.RegisterHandler(999, ServerReceiveMessage);
         }
     }

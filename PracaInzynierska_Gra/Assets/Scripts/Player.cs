@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
     private void Start()
     {
         cam = transform.GetChild(0).GetComponent<Camera>();
-        activeAimingAndShooting = true;
         gameOverScript = GameObject.Find("Injury Canvas").GetComponent<GameOverScript>();
     }
     public void TakeDamage(int strength)
@@ -28,7 +27,7 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(activeAimingAndShooting && Input.GetMouseButtonDown(0))
         {
             Shot();
         }
@@ -50,5 +49,10 @@ public class Player : MonoBehaviour
             }
         }
         
+    }
+
+    public void SwitchActiveAimingAndShooting(bool condition)
+    {
+        activeAimingAndShooting = condition;
     }
 }

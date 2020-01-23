@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SettingsOfPlayer: MonoBehaviour
+public class SettingsOfUser: MonoBehaviour
 {
-    public static SettingsOfPlayer Instance;
+    public static SettingsOfUser Instance;
     
     public static string nick="*Player";
     public static int lastUsedNetworkPort = 25000;

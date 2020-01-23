@@ -72,7 +72,7 @@
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerSteeringScript (obsolete).cs" />
     <Compile Include="Assets\Scripts\ScenesScipt.cs" />
-    <Compile Include="Assets\Scripts\SettingsOfPlayer.cs" />
+    <Compile Include="Assets\Scripts\SettingsOfUser.cs" />
     <Compile Include="Assets\Scripts\UI\ConnectionDetailsOpener.cs" />
     <Compile Include="Assets\Scripts\UI\GameOverScript.cs" />
     <Compile Include="Assets\Scripts\UI\ShowStatusOfConnection.cs" />

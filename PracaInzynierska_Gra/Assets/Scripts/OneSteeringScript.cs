@@ -5,10 +5,17 @@ using UnityEngine;
 public class OneSteeringScript : MonoBehaviour
 {
     public CanvasGroup pauseMenu;
+    Player player;
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    }
     private void Update()
     {
         if (Input.GetButtonDown("Pause"))
         {
+            player.activeAimingAndShooting = !player.activeAimingAndShooting;
+            
             DoPause();
         }
         if(Input.GetKeyDown(KeyCode.B))

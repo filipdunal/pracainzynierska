@@ -1080,6 +1080,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8432368654590835293, guid: 485fce8875a25ff4f98003d793989798,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 485fce8875a25ff4f98003d793989798, type: 3}
 --- !u!1001 &1244072112
@@ -1307,7 +1312,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 03fe5fe5fab08f74588df71b76555792, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -1601,8 +1606,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e2ee4bc55fc97744917ab892d28ec11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  activeAimingAndShooting: 0
+  health: 15
+  activeAimingAndShooting: 1
 --- !u!54 &1683425536
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1977,7 +1982,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: afd3f77fca5cbd8428e8da679e062285, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 

@@ -18,7 +18,7 @@ public class RefreshServer : MonoBehaviour
     }
     private void Start()
     {
-        portInputField.text = SettingsOfPlayer.lastUsedNetworkPort.ToString();
+        portInputField.text = SettingsOfUser.lastUsedNetworkPort.ToString();
         thisButton.onClick.AddListener(ChangePort);
     }
     void ChangePort()
@@ -26,7 +26,7 @@ public class RefreshServer : MonoBehaviour
         int intToSend;
         if(int.TryParse(portInputField.text, out intToSend))
         {
-            SettingsOfPlayer.lastUsedNetworkPort = intToSend;
+            SettingsOfUser.lastUsedNetworkPort = intToSend;
             NetworkServerUI.ServerStart();
         }
         else
