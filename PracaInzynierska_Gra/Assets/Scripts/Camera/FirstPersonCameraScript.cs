@@ -1,25 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class FirstPersonCameraScript : MonoBehaviour
 {
     public float rotationOffsetStrength;
+    public float smoothRate;
+
     Vector3 rotationOffset;
     Quaternion originalRotation;
+    Quaternion rotationToSet;
 
     float offsetHorizontal;
     float offsetVertical;
 
     Player player;
-    
+    CinemachineVirtualCamera vcam;
+
 
     private void Start()
     {
         rotationOffset = Vector3.zero;
         originalRotation = transform.rotation;
 
-        player = GetComponentInParent<Player>();
+        player =GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        vcam = GetComponent<CinemachineVirtualCamera>();
+
     }
     private void Update()
     {
@@ -31,8 +38,9 @@ public class FirstPersonCameraScript : MonoBehaviour
             rotationOffset = new Vector3(offsetVertical, offsetHorizontal, 0f);
             rotationOffset *= rotationOffsetStrength;
 
-            transform.rotation = originalRotation * Quaternion.Euler(rotationOffset);
+            rotationToSet = originalRotation * Quaternion.Euler(rotationOffset);
         }
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotationToSet, Time.deltaTime * smoothRate);
         
     }
 }

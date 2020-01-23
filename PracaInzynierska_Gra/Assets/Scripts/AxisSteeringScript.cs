@@ -37,7 +37,7 @@ public class AxisSteeringScript : MonoBehaviour
 
             if(countShots!= int.Parse(messageValue[2]))
             {
-                listOfActivities.Shot();
+                listOfActivities.ShotManually();
             }
             if(countPauses!= int.Parse(messageValue[3]))
             {

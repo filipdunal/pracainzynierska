@@ -15,12 +15,23 @@ public class OneSteeringScript : MonoBehaviour
         if (Input.GetButtonDown("Pause"))
         {
             player.activeAimingAndShooting = !player.activeAimingAndShooting;
-            
+            if(Time.timeScale!=0f)
+            {
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
             DoPause();
         }
         if(Input.GetKeyDown(KeyCode.B))
         {
-            Shot();
+            ShotManually();
+        }
+        if(Input.GetMouseButtonDown(0))
+        {
+            player.Shot();
         }
     }
     public void DoPause()
@@ -41,7 +52,7 @@ public class OneSteeringScript : MonoBehaviour
             }
         }
     }
-    public void Shot()
+    public void ShotManually()
     {
         GetComponent<CustomInputModule>().SendMouseLeftclick();
     }
