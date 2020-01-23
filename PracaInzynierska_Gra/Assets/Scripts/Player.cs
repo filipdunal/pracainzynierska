@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public int health = 100;
     public bool activeAimingAndShooting;
+    [HideInInspector] public Transform targetObject;
+    [HideInInspector] public Vector3 targetPoint;
     GameOverScript gameOverScript;
 
     Camera cam;
@@ -29,17 +31,27 @@ public class Player : MonoBehaviour
 
     public void Shot()
     {
+        if (targetObject.tag == "Monster")
+        {
+            targetObject.GetComponent<MonsterScript>().TakeDamage(100);
+        }
+    }
+
+    private void Update()
+    {
         if(activeAimingAndShooting)
         {
+            Debug.Log("Tak");
             RaycastHit hit;
             Ray ray = cam.ScreenPointToRay(CustomInputModule.mousePos);
-            if (Physics.Raycast(ray, out hit))
+            targetPoint = ray.origin + ray.direction * 100f;
+            if (Physics.Raycast(ray, out hit,100))
             {
-                Transform objectHit = hit.transform;
-                if (objectHit.tag == "Monster")
-                {
-                    objectHit.GetComponent<MonsterScript>().TakeDamage(100);
-                }
+                targetObject = hit.transform;
+            }
+            else
+            {
+                targetObject = null;
             }
         }
     }
