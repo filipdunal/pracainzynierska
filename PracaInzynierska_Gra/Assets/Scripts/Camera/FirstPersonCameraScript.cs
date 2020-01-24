@@ -43,4 +43,9 @@ public class FirstPersonCameraScript : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, rotationToSet, Time.deltaTime * smoothRate);
         
     }
+
+    public void SetAdrenaline(float value)
+    {
+        vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = value;
+    }
 }

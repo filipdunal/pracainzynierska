@@ -186,7 +186,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -239,7 +239,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -817,7 +817,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.25
       mode: 0
       spread: 0
       speed:
@@ -936,7 +936,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 200
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1053,21 +1053,21 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.6891861
-          inSlope: 0.22434944
-          outSlope: 0.22434944
+          value: 0.8108139
+          inSlope: 2.2432137
+          outSlope: 2.2432137
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.120481916
+          outWeight: 0.10869564
         - serializedVersion: 3
-          time: 1
+          time: 0.97831327
           value: 0
-          inSlope: -1.933828
-          outSlope: -1.933828
+          inSlope: -3.589184
+          outSlope: -3.589184
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.06987959
+          inWeight: 0.061576433
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -2367,7 +2367,7 @@ ParticleSystem:
       m_Bits: 4294967295
     influenceList: []
   ClampVelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -2588,7 +2588,7 @@ ParticleSystem:
     drag:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2800,7 +2800,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 0.84
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -4781,3 +4781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4f1941168f43544bcc4ccc7c6cdaf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fullHealth: {r: 0.25174832, g: 1, b: 0, a: 1}
+  normalInjury: {r: 1, g: 0.9160186, b: 0, a: 1}
+  criticalInjury: {r: 1, g: 0, b: 0, a: 1}
+  dead: {r: 0.2028302, g: 0.8748211, b: 1, a: 1}

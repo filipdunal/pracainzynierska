@@ -5,7 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int health = 100;
+    public int adrenaline;
     public bool activeAimingAndShooting;
+
+    [HideInInspector] public int healthMax;
     [HideInInspector] public Transform targetObject;
     [HideInInspector] public Vector3 targetPoint;
     GameOverScript gameOverScript;
@@ -15,6 +18,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         //cam = transform.GetChild(0).GetComponent<Camera>();
+        healthMax = health;
         cam = GameObject.Find("Camera").GetComponent<Camera>();
         gameOverScript = GameObject.Find("Injury Canvas").GetComponent<GameOverScript>();
     }

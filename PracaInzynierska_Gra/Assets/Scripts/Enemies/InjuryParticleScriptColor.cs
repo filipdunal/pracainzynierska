@@ -4,17 +4,28 @@ using UnityEngine;
 
 public class InjuryParticleScriptColor : MonoBehaviour
 {
+    public Color fullHealth;
+    public Color normalInjury;
+    public Color criticalInjury;
+    public Color dead;
+
     void SetColor(float health)
     {
-        //Debug.Log(health);
         Color color;
         if(health>0f)
         {
-            color = Color.Lerp(Color.red, Color.yellow, health);
+            if(health>0.5f)
+            {
+                color = Color.Lerp(normalInjury, fullHealth, (float)(health - 0.5) * 2);
+            }
+            else
+            {
+                color=Color.Lerp(criticalInjury, normalInjury, (float)(health * 2));
+            }
         }
         else
         {
-            color = Color.blue;
+            color = dead;
         }
         ParticleSystem ps = GetComponent<ParticleSystem>();
         ParticleSystem.MainModule ma = ps.main;

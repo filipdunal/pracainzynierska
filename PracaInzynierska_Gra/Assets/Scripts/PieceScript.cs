@@ -31,10 +31,8 @@ public class PieceScript : MonoBehaviour
 
     IEnumerator SwitchToDefaultMaterial()
     {
-        Debug.Log("Coroutine started");
         yield return new WaitForSeconds(timeAmountOfBlink);
         desiredMaterial = idleMaterial;
-        Debug.Log("Coroutine finished");
     }
 
 }
