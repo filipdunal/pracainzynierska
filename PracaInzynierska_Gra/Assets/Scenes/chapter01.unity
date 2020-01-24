@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &3712969
 Light:
   m_ObjectHideFlags: 0
@@ -646,6 +646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 498839751}
   - component: {fileID: 498839752}
+  - component: {fileID: 498839753}
   m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
@@ -683,6 +684,20 @@ MonoBehaviour:
   monsterPrefabs:
   - {fileID: 1949120591405810894, guid: 64e4b4c043e586c4a91da131e0db55b0, type: 3}
   - {fileID: 9207608307583427396, guid: 48606bf102a7ac241aa59b1b9595b431, type: 3}
+--- !u!114 &498839753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498839750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e322c71995e865b4eae0c316a0b2cc40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 8775125538989910034, guid: b27341adabc0c414b8449ed58a7a45cb,
+    type: 3}
 --- !u!4 &545754284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8093902841836006147, guid: 40b8315824fd3844082edc5b07e9c516,

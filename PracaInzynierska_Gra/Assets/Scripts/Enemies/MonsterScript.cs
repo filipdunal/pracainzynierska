@@ -7,6 +7,7 @@ public class MonsterScript : MonoBehaviour
     public float speed;
     public int attackStrength;
     public int health;
+    int maxHealth;
 
     public bool isFlying;
     [Header("Matters only on flying monster")]
@@ -19,6 +20,7 @@ public class MonsterScript : MonoBehaviour
 
     private void Start()
     {
+        maxHealth = health;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         destination = player.position;
         if (isFlying)
@@ -65,7 +67,8 @@ public class MonsterScript : MonoBehaviour
     public void TakeDamage(int strength)
     {
         health -= strength;
-        if(health<=0)
+        DoParticle();
+        if (health<=0)
         {
             Die();
         }
@@ -73,5 +76,13 @@ public class MonsterScript : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+    }
+
+    void DoParticle()
+    {
+        GameObject particle = Instantiate(GetComponentInParent<InjuryParticleScript>().particle, transform.position + new Vector3(0f, 1f, 0f), Quaternion.identity);
+        float healthInPercent = (float)health / (float)maxHealth;
+        particle.SendMessage("SetColor", healthInPercent);
+        Destroy(particle, 2f);
     }
 }

@@ -31,9 +31,9 @@ public class Player : MonoBehaviour
 
     public void Shot()
     {
-        if (targetObject.tag == "Monster")
+        if (targetObject!=null && targetObject.tag == "Monster")
         {
-            targetObject.GetComponent<MonsterScript>().TakeDamage(100);
+            targetObject.GetComponent<MonsterScript>().TakeDamage(30);
         }
     }
 
@@ -41,7 +41,6 @@ public class Player : MonoBehaviour
     {
         if(activeAimingAndShooting)
         {
-            Debug.Log("Tak");
             RaycastHit hit;
             Ray ray = cam.ScreenPointToRay(CustomInputModule.mousePos);
             targetPoint = ray.origin + ray.direction * 100f;

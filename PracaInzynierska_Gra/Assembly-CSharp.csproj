@@ -118,6 +118,8 @@
     <Compile Include="Assets\Scripts\Connection with smartphone\NetworkServerUI.cs" />
     <Compile Include="Assets\Scripts\Connection with smartphone\RefreshServer.cs" />
     <Compile Include="Assets\Scripts\CustomInputModule.cs" />
+    <Compile Include="Assets\Scripts\Enemies\InjuryParticleScript.cs" />
+    <Compile Include="Assets\Scripts\Enemies\InjuryParticleScriptColor.cs" />
     <Compile Include="Assets\Scripts\Enemies\MonsterScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawning.cs" />
     <Compile Include="Assets\Scripts\OneSteeringScript.cs" />
