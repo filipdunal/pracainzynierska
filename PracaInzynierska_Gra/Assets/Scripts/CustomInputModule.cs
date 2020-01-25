@@ -7,12 +7,16 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEditor;
 using System.Runtime.InteropServices;
+using UnityEngine.SceneManagement;
 #pragma warning disable 618
 public class CustomInputModule : PointerInputModule
 {
+    /*
     [HideInInspector] public static CustomInputModule instance;
+    
     protected new void Awake()
     {
+        Debug.Log(SceneManager.GetActiveScene().name);
         if (instance == null)
         {
             DontDestroyOnLoad(gameObject);
@@ -24,6 +28,7 @@ public class CustomInputModule : PointerInputModule
             Destroy(gameObject);
         }
     }
+    */
 
     private float m_NextAction;
 
