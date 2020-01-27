@@ -6,9 +6,11 @@ public class OneSteeringScript : MonoBehaviour
 {
     public CanvasGroup pauseMenu;
     Player player;
+    WeaponSwitching weaponSwitching;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        weaponSwitching = GameObject.Find("Arm / Weapon holder").GetComponent<WeaponSwitching>();
     }
     private void Update()
     {
@@ -31,7 +33,7 @@ public class OneSteeringScript : MonoBehaviour
         }
         if(Input.GetMouseButtonDown(0))
         {
-            player.Shot();
+            weaponSwitching.Shot();
         }
     }
     public void DoPause()

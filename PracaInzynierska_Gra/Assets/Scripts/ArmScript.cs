@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class ArmScript : MonoBehaviour
 {
-    Player playerScript;
+    WeaponSwitching weaponSwitching;
     //Quaternion offsetRotation;
     private void Start()
     {
-        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        weaponSwitching = GetComponent<WeaponSwitching>();
         //offsetRotation = transform.localRotation;
     }
     private void Update()
     {
-        transform.LookAt(playerScript.targetPoint);
+        transform.LookAt(weaponSwitching.targetPoint);
         //transform.rotation *= offsetRotation;
     }
 }

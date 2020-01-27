@@ -4,15 +4,39 @@ using UnityEngine;
 
 public class WeaponSwitching : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [HideInInspector] public Transform targetObject;
+    [HideInInspector] public Vector3 targetPoint;
+    Player playerScript;
+    Camera cam;
+    private void Start()
     {
-        
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        cam = GameObject.Find("Camera").GetComponent<Camera>();
+    }
+    public void Shot()
+    {
+        if (targetObject != null && targetObject.tag == "Monster")
+        {
+            targetObject.GetComponent<MonsterScript>().TakeDamage(30);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (playerScript.activeAimingAndShooting)
+        {
+            RaycastHit hit;
+            Ray ray = cam.ScreenPointToRay(CustomInputModule.mousePos);
+            targetPoint = ray.origin + ray.direction * 100f;
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                targetObject = hit.transform;
+            }
+            else
+            {
+                targetObject = null;
+            }
+        }
     }
 }
