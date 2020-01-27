@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Filip/Documents/Praca inzynierska builds/Build38/PracaInzynierska_Gra.exe
+C:/Users/Filip/Documents/Praca inzynierska builds/Build39/PracaInzynierska_Gra.exe
 SceneListBegin?
 Assets/Scenes/mainMenu.unity
 Assets/Scenes/Arena chapter01.unity
@@ -25,6 +25,7 @@ ee481c0b0c98ed39349ea436ebc771da Assembly-CSharp.dll:.ShowStatusOfConnection
 a2113831d3323f931007e1b3812dc814 Assembly-CSharp.dll:Cinemachine.CinemachineFollowZoom
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 a770ada2daf21fd0337aa2b35fe7fce7 Assembly-CSharp.dll:.InjuryParticleScriptColor
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.CustomEventSystemObjectController
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 507174d46dacbc5fe45e28485db5dd1e UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -59,6 +60,8 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 d3c76b14a25eebd3a3323dd43297919c Unity.TextMeshPro.dll:TMPro.TMP_InputField
 352455aaadb8c98ff36ead557753abfa Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TiltInput
+71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
+71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 507174d46dacbc5fe45e28485db5dd1e UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -91,7 +94,7 @@ aa165095bcf0f4d99594ea33df01c81b UnityEngine.UI.dll:UnityEngine.UI.Slider
 0fd6822f6177297bd0eb4d83cc7a9030 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-ac55d389dc06e1c456476634b53a2b1e Assembly-CSharp.dll:.CustomInputModule
+608742abf4d66c8ba47bcca8bff2cfdd Assembly-CSharp.dll:.CustomInputModule
 8ca7ad9feea2d30aa64dfb7929162184 Assembly-CSharp.dll:Cinemachine.CinemachineExternalCamera
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.NetworkServerUI
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -208,11 +211,10 @@ e15f04bd29e7440ba13ac72e9ce81009 Assembly-CSharp.dll:.PieceScript
 df434544c9f7b33d1cc7e635b180d279 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 e65b2cbca3863e269f77f4e4281f8fee Assembly-CSharp.dll:.RefreshServer
-03c71eef7a9b7a2fbdf234a49702c569 Assembly-CSharp.dll:.AxisSteeringScript
+12b6bc9f144c471987b5aa86a61d4dae Assembly-CSharp.dll:.AxisSteeringScript
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 4ecb95b2d829d8749c1e345f0de19a93 Assembly-CSharp.dll:Cinemachine.CinemachineBrain
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Cinemachine.CinemachineHardLockToTarget
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ConnectionDetailsOpener
 2c38da0504d94a36e68bd2308d606900 Assembly-CSharp.dll:Cinemachine.CinemachineBasicMultiChannelPerlin
 1615d3bb1db164c1672020cea49440ce Assembly-CSharp.dll:Cinemachine.CinemachineClearShot
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.CustomEventSystemObjectController

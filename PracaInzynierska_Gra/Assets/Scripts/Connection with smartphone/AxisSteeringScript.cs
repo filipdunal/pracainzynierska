@@ -9,12 +9,11 @@ public class AxisSteeringScript : MonoBehaviour
     //Received values
     float x = 0f;
     float y = 0f;
-    int countShots = 0;
-    int countPauses = 0;
-    int powerOfShot = 0;
 
     public float lerpStrength = 0.5f;
     public Vector2 mousePosition;
+    public bool shotClick;
+    public bool pauseClick;
 
     OneSteeringScript listOfActivities;
 
@@ -31,25 +30,31 @@ public class AxisSteeringScript : MonoBehaviour
             messageValue = NetworkServerUI.receivedString.Split('|');
             //0 - x
             //1 - y
-            //2 - number of shots
-            //3 - number of pauses
-            //4 - power of shot
+            //2 - shot (1:0)
+            //3 - pause (1:0)
 
-            if(countShots!= int.Parse(messageValue[2]))
+            // Optimize this block of code in future
+            if (shotClick)                   
             {
-                listOfActivities.ShotManually();
+                if(messageValue[2] == "1") //returns true every frame when button is held down 
+                {
+                    listOfActivities.ShotManually();
+                }
+                else
+                {
+                    listOfActivities.ReleaseShotManually(); //returns true in frame when shot button is released
+                }
             }
-            if(countPauses!= int.Parse(messageValue[3]))
+            if(!pauseClick && ((messageValue[3] == "1")))
             {
                 listOfActivities.DoPause();
             }
             
             x = float.Parse(messageValue[0], System.Globalization.CultureInfo.InvariantCulture);
             y = float.Parse(messageValue[1], System.Globalization.CultureInfo.InvariantCulture);
-            countShots = int.Parse(messageValue[2]);
-            countPauses = int.Parse(messageValue[3]);
-            powerOfShot = int.Parse(messageValue[4]);
-
+            shotClick = (messageValue[2] == "1");
+            pauseClick = (messageValue[3] == "1");
+            
             Aim();
         }
     }

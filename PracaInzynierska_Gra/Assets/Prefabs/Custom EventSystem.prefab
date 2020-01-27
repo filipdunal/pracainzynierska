@@ -97,7 +97,6 @@ MonoBehaviour:
   cursorPosition: {x: 0, y: 0}
   controller: 1
   objectBelowPointer: {fileID: 0}
-  durationOfFakeClick: 0.15
   xOffsetOfCursor: 0.5
   yOffsetOfCursor: 0.5
   scaleOfCursor: 100
@@ -115,6 +114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lerpStrength: 0.5
   mousePosition: {x: 0, y: 0}
+  shotClick: 0
+  pauseClick: 0
 --- !u!114 &2798539920484709938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +123,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6238059289578564858}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b0706fa45ec78043a0170f70666003f, type: 3}
   m_Name: 

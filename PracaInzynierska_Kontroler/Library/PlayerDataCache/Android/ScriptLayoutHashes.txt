@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Filip/Documents/Do CV/Praca Inzynierska Kontroler/Build/Kontroler.apk
+C:/Users/Filip/Documents/Praca inzynierska builds/Kontroler18.apk
 SceneListBegin?
 Assets/Scenes/controller.unity
 SceneListEnd?
@@ -119,7 +119,7 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 b8a5e8091ab0b8861d2add371082c5e0 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
-bfcedf269c4c7373833857ad3f126670 Assembly-CSharp.dll:.MessagingScript
+3dc40edb27434b043dabf2c9484b280f Assembly-CSharp.dll:.MessagingScript
 a8b6c919b2049fcc280823488144371f Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
 4bd1cc3c85989d2213a9a8fd9d09e63f Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.InputAxisScrollbar
 fdd7177da17032ba94d98037cc97bb49 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.AxisTouchButton

@@ -54,6 +54,10 @@ public class OneSteeringScript : MonoBehaviour
     }
     public void ShotManually()
     {
-        GetComponent<CustomInputModule>().SendMouseLeftclick();
+        GetComponent<CustomInputModule>().SendMouseLeftClick();
+    }
+    public void ReleaseShotManually()
+    {
+        GetComponent<CustomInputModule>().ReleaseMouseLeftClick();
     }
 }

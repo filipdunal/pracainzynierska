@@ -173,9 +173,13 @@ public class CustomInputModule : PointerInputModule
                 else if(controller==Controller.gamepad)
                 {
                     cursorPosition += new Vector2(Input.GetAxisRaw("Horizontal") * 20, -Input.GetAxisRaw("Vertical") * 20);
-                    if(Input.GetButtonDown("Fire2"))
+                    if(Input.GetButton("Fire2"))
                     {
-                        SendMouseLeftclick();
+                        SendMouseLeftClick();
+                    }
+                    if(Input.GetButtonUp("Fire2"))
+                    {
+                        ReleaseMouseLeftClick();
                     }
                 }
                 //mousePos = new Vector2(cursorPosition.x, cursorPosition.y);
@@ -187,23 +191,24 @@ public class CustomInputModule : PointerInputModule
             ShowCursor(false);
     }
     
-    public void SendMouseLeftclick()
+    public void SendMouseLeftClick()
     {
         if (Application.isFocused) //Probably not needed 'if' statement
         {
             Vector2 p = new Vector2(Display.main.systemWidth, Display.main.systemHeight);
-            //mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, (uint)p.x, (uint)p.y, 0, (UIntPtr)0);
+            //mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, (uint)p.x, (uint)p.y, 0, (UIntPtr)0); DELETE THIS
             mouse_event(MOUSEEVENTF_LEFTDOWN, (uint)p.x, (uint)p.y, 0, (UIntPtr)0);
-            StartCoroutine(ReleaseMouse(p));
             
         }
     }
-    [SerializeField] float durationOfFakeClick = 0.1f;
-    IEnumerator ReleaseMouse(Vector2 p)
+    //[SerializeField] float durationOfFakeClick = 0.1f; DELETE THIS
+    public void ReleaseMouseLeftClick()
     {
-        yield return new WaitForSecondsRealtime(durationOfFakeClick);
-        mouse_event(MOUSEEVENTF_LEFTUP, (uint)p.x, (uint)p.y, 0, (UIntPtr)0);
-
+        if(Application.isFocused)
+        {
+            Vector2 p = new Vector2(Display.main.systemWidth, Display.main.systemHeight);
+            mouse_event(MOUSEEVENTF_LEFTUP, (uint)p.x, (uint)p.y, 0, (UIntPtr)0);
+        }
     }
 
     public void ShowCursor(bool show)
