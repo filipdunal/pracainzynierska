@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public int health = 100;
     public int adrenaline;
-    public bool activeAimingAndShooting;
+    //public bool activeAimingAndShooting;
 
     [HideInInspector] public int healthMax;
     [HideInInspector] public Transform targetObject;

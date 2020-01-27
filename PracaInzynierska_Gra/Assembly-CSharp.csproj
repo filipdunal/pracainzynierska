@@ -135,6 +135,7 @@
     <Compile Include="Assets\Scripts\UI\GameOverScript.cs" />
     <Compile Include="Assets\Scripts\UI\ShowStatusOfConnection.cs" />
     <Compile Include="Assets\Scripts\UI\SwitchPages.cs" />
+    <Compile Include="Assets\Scripts\WeaponSwitching.cs" />
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Filip/Documents/GitHub/pracainzynierska/PracaInzynierska_Gra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
