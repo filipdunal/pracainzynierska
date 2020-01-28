@@ -27,13 +27,22 @@ public class OneSteeringScript : MonoBehaviour
             }
             DoPause();
         }
-        if(Input.GetKeyDown(KeyCode.B))
-        {
-            ShotManually();
-        }
-        if(Input.GetMouseButtonDown(0))
+        // What is that xd
+        //if(Input.GetKeyDown(KeyCode.B))
+        //{
+        //    ShotManually();
+        //}
+        if(Input.GetMouseButton(0))
         {
             weaponSwitching.Shot();
+        }
+        if(Input.GetButtonDown("Next weapon"))
+        {
+            weaponSwitching.NextWeapon();
+        }
+        if(Input.GetButtonDown("Previous weapon"))
+        {
+            weaponSwitching.PreviousWeapon();
         }
     }
     public void DoPause()

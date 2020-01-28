@@ -14,6 +14,7 @@ public class MonsterScript : MonoBehaviour
     public float flightAltitude = 2f;
     public float noseDiveStartDistance = 3f;
     public bool isNoseDiving;
+    public float noseDivingSpeed = 1f;
 
     Transform player;
     Vector3 destination;
@@ -47,7 +48,7 @@ public class MonsterScript : MonoBehaviour
 
     void NoseDive()
     {
-        destination = Vector3.Lerp(destination, player.position, Time.deltaTime);
+        destination = Vector3.Lerp(destination, player.position, Time.deltaTime * noseDivingSpeed);
         if(!GetComponent<Animator>().GetBool("goToNoseDive"))
         {
             GetComponent<Animator>().SetBool("goToNoseDive", true);

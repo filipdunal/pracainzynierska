@@ -4,39 +4,56 @@ using UnityEngine;
 
 public class WeaponSwitching : MonoBehaviour
 {
-
-    [HideInInspector] public Transform targetObject;
-    [HideInInspector] public Vector3 targetPoint;
-    Player playerScript;
-    Camera cam;
+    int selectedWeapon = 0;
     private void Start()
     {
-        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        cam = GameObject.Find("Camera").GetComponent<Camera>();
+        SelectWeapon();
     }
-    public void Shot()
+    void SelectWeapon()
     {
-        if (targetObject != null && targetObject.tag == "Monster")
+        int i = 0;
+        foreach(Transform weapon in transform)
         {
-            targetObject.GetComponent<MonsterScript>().TakeDamage(30);
-        }
-    }
-
-    private void Update()
-    {
-        if (playerScript.activeAimingAndShooting)
-        {
-            RaycastHit hit;
-            Ray ray = cam.ScreenPointToRay(CustomInputModule.mousePos);
-            targetPoint = ray.origin + ray.direction * 100f;
-            if (Physics.Raycast(ray, out hit, 100))
+            if(selectedWeapon==i)
             {
-                targetObject = hit.transform;
+                weapon.gameObject.SetActive(true);
             }
             else
             {
-                targetObject = null;
+                weapon.gameObject.SetActive(false);
             }
+            i++;
         }
     }
+    
+    public void NextWeapon()
+    {
+        if(selectedWeapon>=transform.childCount-1)
+        {
+            selectedWeapon=0;
+        }
+        else
+        {
+            selectedWeapon++;
+        }
+        SelectWeapon();
+    }
+    public void PreviousWeapon()
+    {
+        if(selectedWeapon<=0)
+        {
+            selectedWeapon = transform.childCount - 1;
+        }
+        else
+        {
+            selectedWeapon--;
+        }
+        SelectWeapon();
+    }
+    public void Shot()
+    {
+        transform.GetChild(selectedWeapon).GetComponent<WeaponScript>().Shot();
+    }
+    
+    
 }

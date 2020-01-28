@@ -183,6 +183,7 @@ MonoBehaviour:
   flightAltitude: 3
   noseDiveStartDistance: 7
   isNoseDiving: 0
+  noseDivingSpeed: 3
 --- !u!65 &5331130218526981799
 BoxCollider:
   m_ObjectHideFlags: 0
