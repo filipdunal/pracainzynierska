@@ -184,11 +184,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745b392c5972a9346bddee301965dd6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ammoClipCapacity: 30
+  ammoClipsStartAmount: 5
+  ammoCurrentInClip: 0
+  ammoClipsLeft: 0
   fireRate: 15
+  damageOfBullet: 30
   recoilDistance: 0.5
   recoilForce: 70
   recoilGoingBackForce: 5
   recoilDelayToGoBack: 0.1
+  degreesToRotate: -45
+  speedOfRotatingGun: 5
+  reloadTime: 1
 --- !u!1001 &3817168772328393788
 PrefabInstance:
   m_ObjectHideFlags: 0
