@@ -16,22 +16,8 @@ public class OneSteeringScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Pause"))
         {
-            player.activeAimingAndShooting = !player.activeAimingAndShooting;
-            if(Time.timeScale!=0f)
-            {
-                Time.timeScale = 0f;
-            }
-            else
-            {
-                Time.timeScale = 1f;
-            }
             DoPause();
         }
-        // What is that xd
-        //if(Input.GetKeyDown(KeyCode.B))
-        //{
-        //    ShotManually();
-        //}
         if(Input.GetMouseButton(0))
         {
             weaponSwitching.Shot();
@@ -45,9 +31,19 @@ public class OneSteeringScript : MonoBehaviour
             weaponSwitching.PreviousWeapon();
         }
     }
+
     public void DoPause()
     {
-        if(pauseMenu!=null)
+        player.activeAimingAndShooting = !player.activeAimingAndShooting;
+        if (Time.timeScale != 0f)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+        if (pauseMenu != null)
         {
             if (pauseMenu.interactable)
             {

@@ -113,7 +113,6 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
-    <Compile Include="Assets\Scripts\ArmScript.cs" />
     <Compile Include="Assets\Scripts\Camera\FirstPersonCameraScript.cs" />
     <Compile Include="Assets\Scripts\Connection with smartphone\AxisSteeringScript.cs" />
     <Compile Include="Assets\Scripts\Connection with smartphone\NetworkServerUI.cs" />
@@ -135,8 +134,9 @@
     <Compile Include="Assets\Scripts\UI\GameOverScript.cs" />
     <Compile Include="Assets\Scripts\UI\ShowStatusOfConnection.cs" />
     <Compile Include="Assets\Scripts\UI\SwitchPages.cs" />
-    <Compile Include="Assets\Scripts\WeaponScript.cs" />
-    <Compile Include="Assets\Scripts\WeaponSwitching.cs" />
+    <Compile Include="Assets\Scripts\Weapons\ArmScript.cs" />
+    <Compile Include="Assets\Scripts\Weapons\WeaponScript.cs" />
+    <Compile Include="Assets\Scripts\Weapons\WeaponSwitching.cs" />
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Filip/Documents/GitHub/pracainzynierska/PracaInzynierska_Gra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

@@ -185,6 +185,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 15
+  recoilDistance: 0.5
+  recoilForce: 70
+  recoilGoingBackForce: 5
+  recoilDelayToGoBack: 0.1
 --- !u!1001 &3817168772328393788
 PrefabInstance:
   m_ObjectHideFlags: 0

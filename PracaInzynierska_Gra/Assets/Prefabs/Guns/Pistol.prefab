@@ -92,6 +92,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 5
+  recoilDistance: 0.5
+  recoilForce: 70
+  recoilGoingBackForce: 5
+  recoilDelayToGoBack: 0.1
 --- !u!1 &8205444270769637456
 GameObject:
   m_ObjectHideFlags: 0
