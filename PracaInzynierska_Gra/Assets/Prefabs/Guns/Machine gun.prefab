@@ -184,7 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745b392c5972a9346bddee301965dd6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoClipCapacity: 30
+  typeOfWeapon: 2
+  ammoClipCapacity: 32
   ammoClipsStartAmount: 5
   ammoCurrentInClip: 0
   ammoClipsLeft: 0

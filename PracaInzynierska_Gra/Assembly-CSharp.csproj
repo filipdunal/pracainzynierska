@@ -123,7 +123,8 @@
     <Compile Include="Assets\Scripts\Enemies\InjuryParticleScriptColor.cs" />
     <Compile Include="Assets\Scripts\Enemies\MonsterScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawning.cs" />
-    <Compile Include="Assets\Scripts\HudInfo.cs" />
+    <Compile Include="Assets\Scripts\Hud\AmmoHud.cs" />
+    <Compile Include="Assets\Scripts\Hud\HudInfo.cs" />
     <Compile Include="Assets\Scripts\OneSteeringScript.cs" />
     <Compile Include="Assets\Scripts\PieceScript.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />

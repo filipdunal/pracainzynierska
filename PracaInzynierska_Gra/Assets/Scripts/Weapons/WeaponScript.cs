@@ -6,6 +6,9 @@ public class WeaponScript : MonoBehaviour
 {
     ArmScript armScript;
     ParticleSystem muzzleFlash;
+    
+    [Tooltip("1- pistol , 2- AK, 3- shotgun")]
+    public int typeOfWeapon = 1;
 
     [Header("Ammo start values")]
     public int ammoClipCapacity=30;
@@ -40,8 +43,17 @@ public class WeaponScript : MonoBehaviour
     Quaternion defaultRotation;
     Quaternion reloadingRotation;
 
-    
-    
+    AmmoHud ammoHud;
+
+    private void OnEnable() //To avoid looking for a component on every gun in the same time
+    {
+        if(ammoHud==null) //To look for component only once (when it's being chosen for the first time)
+        {
+            ammoHud = GameObject.Find("Ammo").GetComponent<AmmoHud>();
+        }
+        ammoHud.RefreshImage(ammoClipCapacity,typeOfWeapon);
+
+    }
     private void Start()
     {
         defaultRotation = transform.localRotation;
