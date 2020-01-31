@@ -12,6 +12,7 @@ public class CustomEventSystemObjectController : MonoBehaviour
         if (!instance)
         {
             instance = this;
+            instance.GetComponent<OneSteeringScript>().enabled = IsArena();
         }  
         //otherwise, if we do, kill this thing
         else

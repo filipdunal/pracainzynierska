@@ -123,6 +123,8 @@ public class WeaponScript : MonoBehaviour
     }
     private void Update()
     {
+        ammoHud.AmmoUpdate(ammoCurrentInClip, ammoClipCapacity, ammoClipsLeft);
+
         recoilPosition = defaultPosition + new Vector3(0f, 0f, -recoilDistance);
         
         if (shooting)

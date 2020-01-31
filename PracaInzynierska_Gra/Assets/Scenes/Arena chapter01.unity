@@ -555,7 +555,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1001 &286973245
 PrefabInstance:
@@ -677,19 +677,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300004, guid: edcbef7dfaca59d40ac35eab7817fa3b, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
 --- !u!222 &306315426
 CanvasRenderer:
@@ -1304,13 +1304,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300004, guid: edcbef7dfaca59d40ac35eab7817fa3b, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
 --- !u!222 &1056492660
 CanvasRenderer:
@@ -1445,7 +1445,7 @@ PrefabInstance:
     - target: {fileID: 8432368655004403846, guid: 485fce8875a25ff4f98003d793989798,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 485fce8875a25ff4f98003d793989798, type: 3}
@@ -1569,7 +1569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2441,9 +2441,9 @@ MonoBehaviour:
   fillerClips: {fileID: 1056492659}
   backgroundAmmo: {fileID: 1348003130}
   fillerAmmo: {fileID: 2023067696}
-  colorForPistol: {r: 0, g: 0, b: 0, a: 0}
-  colorForAK: {r: 0, g: 0, b: 0, a: 0}
-  colorForShotgun: {r: 0, g: 0, b: 0, a: 0}
+  colorForPistol: {r: 0, g: 0.75686264, b: 1, a: 1}
+  colorForAK: {r: 0.73823535, g: 0.25, b: 1, a: 1}
+  colorForShotgun: {r: 1, g: 0.63320255, b: 0, a: 1}
 --- !u!1 &1959272791
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,13 +2589,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300006, guid: edcbef7dfaca59d40ac35eab7817fa3b, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
+  m_Type: 3
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
 --- !u!222 &2023067697
 CanvasRenderer:

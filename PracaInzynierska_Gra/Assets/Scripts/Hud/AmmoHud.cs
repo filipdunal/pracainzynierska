@@ -22,9 +22,6 @@ public class AmmoHud : MonoBehaviour
     public Color colorForAK;
     public Color colorForShotgun;
     
-    public void AmmoHUDupdate(int category, int ammo, int maxAmmo, int clips)
-    {
-    }
 
     /*  Type 
      *  1 - pistol
@@ -56,13 +53,24 @@ public class AmmoHud : MonoBehaviour
         switch(type)
         {
             case 1:
+                fillerAmmo.color = colorForPistol;
                 break;
             case 2:
+                fillerAmmo.color = colorForAK;
                 break;
             case 3:
+                fillerAmmo.color = colorForShotgun;
                 break;
             default:
+                fillerAmmo.color = Color.white;
                 break;
         }
+        fillerClips.color = fillerAmmo.color;
+    }
+
+    public void AmmoUpdate(int ammoCurrent, int maxAmmo, int clipsCurrent)
+    {
+        fillerAmmo.fillAmount = (float)ammoCurrent / (float)maxAmmo;
+        fillerClips.fillAmount = (float)clipsCurrent / 16f;
     }
 }
