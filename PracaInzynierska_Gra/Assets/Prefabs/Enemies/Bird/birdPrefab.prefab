@@ -119,8 +119,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9207608307583663972}
   - component: {fileID: 9207608307590844548}
-  - component: {fileID: 114807653696126360}
   - component: {fileID: 5331130218526981799}
+  - component: {fileID: 114237334821432274}
+  - component: {fileID: 114140610083492612}
   m_Layer: 0
   m_Name: birdPrefab
   m_TagString: Monster
@@ -164,26 +165,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114807653696126360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9207608307583427396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2192087508a725b40b357484a1e2db58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  attackStrength: 5
-  health: 100
-  isFlying: 1
-  flightAltitude: 3
-  noseDiveStartDistance: 7
-  isNoseDiving: 0
-  noseDivingSpeed: 3
 --- !u!65 &5331130218526981799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -197,6 +178,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.35948774, y: 0.14568985, z: 0.46473742}
   m_Center: {x: 0.008067742, y: 0.05562347, z: -0.028493464}
+--- !u!114 &114237334821432274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9207608307583427396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53b25e4e1a0aa64f95987af5384d354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackStrength: 5
+  health: 100
+--- !u!114 &114140610083492612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9207608307583427396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d786c41da7b02d45b388bbfc2336bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  flightAltitude: 3
+  noseDiveStartDistance: 7
+  isNoseDiving: 0
+  noseDivingSpeed: 3
 --- !u!1 &9207608307583427398
 GameObject:
   m_ObjectHideFlags: 0

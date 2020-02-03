@@ -77,7 +77,7 @@ public class WeaponScript : MonoBehaviour
                 muzzleFlash.Play();
                 if (armScript.targetObject != null && armScript.targetObject.tag == "Monster")
                 {
-                    armScript.targetObject.GetComponent<MonsterScript>().TakeDamage(damageOfBullet);
+                    armScript.targetObject.GetComponent<DamageMonsterScript>().TakeDamage(damageOfBullet);
                 }
 
                 //StopAllCoroutines();

@@ -853,9 +853,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5028151082192767284}
   - component: {fileID: 5028151082200491750}
+  - component: {fileID: 7746896425708627591}
+  - component: {fileID: 1428217011272798320}
+  - component: {fileID: 8810559668965843019}
   m_Layer: 0
-  m_Name: zombie1 prefab
-  m_TagString: Untagged
+  m_Name: Zombie classic
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -889,12 +892,53 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 58a9fd82fb12bf5439da9139f59fc371, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &7746896425708627591
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5028151082193196372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9580375, y: 1.4914646, z: 0.7995122}
+  m_Center: {x: 0.0769313, y: 0.7306328, z: 0.24011901}
+--- !u!114 &1428217011272798320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5028151082193196372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9159f3f4a53fbe4f9db936607492b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedOfRootMotion: 1
+--- !u!114 &8810559668965843019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5028151082193196372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53b25e4e1a0aa64f95987af5384d354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetOfParticlePlace: {x: 0, y: 1, z: 0}
+  attackStrength: 5
+  health: 100
 --- !u!1 &5028151082193196374
 GameObject:
   m_ObjectHideFlags: 0

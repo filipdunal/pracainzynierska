@@ -620,7 +620,7 @@ ParticleSystem:
     startRotation:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.7853981
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1053,21 +1053,21 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.8108139
-          inSlope: 2.2432137
-          outSlope: 2.2432137
+          value: 0.26487064
+          inSlope: 0.2053322
+          outSlope: 0.2053322
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.10869564
+          outWeight: 0.08069743
         - serializedVersion: 3
           time: 0.97831327
           value: 0
-          inSlope: -3.589184
-          outSlope: -3.589184
+          inSlope: -1.390839
+          outSlope: -1.390839
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.061576433
+          inWeight: 0.12729405
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -1204,7 +1204,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -1314,7 +1314,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7853982
+      scalar: 3.0246556
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2
@@ -4725,7 +4725,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4781,7 +4781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4f1941168f43544bcc4ccc7c6cdaf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullHealth: {r: 0.25174832, g: 1, b: 0, a: 1}
-  normalInjury: {r: 1, g: 0.9160186, b: 0, a: 1}
-  criticalInjury: {r: 1, g: 0, b: 0, a: 1}
-  dead: {r: 0.2028302, g: 0.8748211, b: 1, a: 1}
+  fullHealth: {r: 0.25174832, g: 1, b: 0, a: 0.49019608}
+  normalInjury: {r: 1, g: 0.9160186, b: 0, a: 0.49019608}
+  criticalInjury: {r: 1, g: 0, b: 0, a: 0.49019608}
+  dead: {r: 0.2028302, g: 0.8748211, b: 1, a: 0.49019608}

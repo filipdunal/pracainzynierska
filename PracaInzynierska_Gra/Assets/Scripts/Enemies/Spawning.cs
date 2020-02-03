@@ -18,17 +18,11 @@ public class Spawning : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(Time.time);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Random.value > 0.5f)
-            {
-                SpawnMonster(0);
-            }
-            else
-            {
-                SpawnMonster(1);
-            }
-               
+            int randomMonster = (int)Random.Range(0f, monsterPrefabs.Count);
+            SpawnMonster(randomMonster);  
         }
     }
 

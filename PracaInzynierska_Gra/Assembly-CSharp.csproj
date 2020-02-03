@@ -119,10 +119,13 @@
     <Compile Include="Assets\Scripts\Connection with smartphone\RefreshServer.cs" />
     <Compile Include="Assets\Scripts\CustomEventSystemObjectController.cs" />
     <Compile Include="Assets\Scripts\CustomInputModule.cs" />
+    <Compile Include="Assets\Scripts\Enemies\DamageMonsterScript.cs" />
+    <Compile Include="Assets\Scripts\Enemies\FlyerScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\InjuryParticleScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\InjuryParticleScriptColor.cs" />
     <Compile Include="Assets\Scripts\Enemies\MonsterScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawning.cs" />
+    <Compile Include="Assets\Scripts\Enemies\ZombieScript.cs" />
     <Compile Include="Assets\Scripts\Hud\AmmoHud.cs" />
     <Compile Include="Assets\Scripts\Hud\HealthHud.cs" />
     <Compile Include="Assets\Scripts\OneSteeringScript.cs" />
