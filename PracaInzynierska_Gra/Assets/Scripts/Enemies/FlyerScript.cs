@@ -33,10 +33,5 @@ public class FlyerScript : MonoBehaviour
     void NoseDive()
     {
         destination = Vector3.Lerp(destination, player.position, Time.deltaTime * noseDivingSpeed);
-        if (!GetComponent<Animator>().GetBool("goToNoseDive"))
-        {
-            GetComponent<Animator>().SetBool("goToNoseDive", true);
-        }
-
     }
 }
