@@ -53,6 +53,8 @@ public class WeaponScript : MonoBehaviour
         }
         ammoHud.RefreshImage(ammoClipCapacity,typeOfWeapon);
 
+        reloading = false; //To avoid bug of freezing weapon when it's changed during the reloading
+
     }
     private void Start()
     {

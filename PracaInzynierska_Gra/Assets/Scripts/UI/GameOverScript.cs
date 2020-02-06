@@ -17,6 +17,7 @@ public class GameOverScript : MonoBehaviour
     public void Dead()
     {
        playerScript.activeAimingAndShooting = false;
+       playerScript.gameOver = true;
        GetComponent<Canvas>().transform.GetChild(0).GetComponent<Animator>().Play("deadScreen");
     }
 

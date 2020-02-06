@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public int health = 100;
     public int adrenaline;
     public bool activeAimingAndShooting;
+    public bool gameOver;
 
     [HideInInspector] public int healthMax;
     GameOverScript gameOverScript;

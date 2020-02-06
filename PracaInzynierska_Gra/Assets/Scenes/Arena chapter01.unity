@@ -907,7 +907,7 @@ Transform:
   - {fileID: 128610475}
   - {fileID: 939844535}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &413270728 stripped
 ParticleSystem:
@@ -926,6 +926,10 @@ GameObject:
   - component: {fileID: 498839751}
   - component: {fileID: 498839752}
   - component: {fileID: 498839753}
+  - component: {fileID: 498839754}
+  - component: {fileID: 498839757}
+  - component: {fileID: 498839756}
+  - component: {fileID: 498839755}
   m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
@@ -945,7 +949,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &498839752
 MonoBehaviour:
@@ -982,6 +986,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle: {fileID: 8775125538989910034, guid: b27341adabc0c414b8449ed58a7a45cb,
     type: 3}
+--- !u!114 &498839754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498839750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa306ab2bd82f74c94a1c0568caede1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 7374111970804976419, guid: 752073762a93e1e41aba2aafc84a4cb3,
+    type: 3}
+  timeDelayFromStart: 4
+--- !u!114 &498839755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498839750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa306ab2bd82f74c94a1c0568caede1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 2480772051258560228, guid: 0a3c2e90f465e2947b54825d51448f65,
+    type: 3}
+  timeDelayFromStart: 9
+--- !u!114 &498839756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498839750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa306ab2bd82f74c94a1c0568caede1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 7585226473533453902, guid: 4a3f05d32a4681040b1bfd3388505beb,
+    type: 3}
+  timeDelayFromStart: 6
+--- !u!114 &498839757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498839750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa306ab2bd82f74c94a1c0568caede1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 5028151082193196372, guid: f579a8221a433e044b2bbde3b34947ab,
+    type: 3}
+  timeDelayFromStart: 4
 --- !u!4 &545754284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8093902841836006147, guid: 40b8315824fd3844082edc5b07e9c516,
@@ -2244,6 +2308,7 @@ MonoBehaviour:
   health: 15
   adrenaline: 0
   activeAimingAndShooting: 1
+  gameOver: 0
   healthMax: 0
 --- !u!54 &1683425536
 Rigidbody:
@@ -2963,7 +3028,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2109771025
 GameObject:

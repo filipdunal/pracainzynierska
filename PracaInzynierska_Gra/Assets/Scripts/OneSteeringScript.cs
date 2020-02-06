@@ -21,7 +21,10 @@ public class OneSteeringScript : MonoBehaviour
         }
         if(Input.GetMouseButton(0))
         {
-            weaponSwitching.Shot();
+            if(player.activeAimingAndShooting)
+            {
+                weaponSwitching.Shot();
+            }
         }
         if(Input.GetButtonDown("Next weapon"))
         {
@@ -35,30 +38,34 @@ public class OneSteeringScript : MonoBehaviour
 
     public void DoPause()
     {
-        player.activeAimingAndShooting = !player.activeAimingAndShooting;
-        if (Time.timeScale != 0f)
+        if(!player.gameOver)
         {
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
-        if (pauseMenu != null)
-        {
-            if (pauseMenu.interactable)
+            player.activeAimingAndShooting = !player.activeAimingAndShooting;
+            if (Time.timeScale != 0f)
             {
-                pauseMenu.interactable = false;
-                pauseMenu.alpha = 0;
-                pauseMenu.blocksRaycasts = false;
+                Time.timeScale = 0f;
             }
             else
             {
-                pauseMenu.interactable = true;
-                pauseMenu.alpha = 1;
-                pauseMenu.blocksRaycasts = true;
+                Time.timeScale = 1f;
+            }
+            if (pauseMenu != null)
+            {
+                if (pauseMenu.interactable)
+                {
+                    pauseMenu.interactable = false;
+                    pauseMenu.alpha = 0;
+                    pauseMenu.blocksRaycasts = false;
+                }
+                else
+                {
+                    pauseMenu.interactable = true;
+                    pauseMenu.alpha = 1;
+                    pauseMenu.blocksRaycasts = true;
+                }
             }
         }
+        
     }
     public void ShotManually()
     {
