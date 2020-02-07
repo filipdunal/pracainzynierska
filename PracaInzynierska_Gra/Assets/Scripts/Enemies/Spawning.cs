@@ -10,43 +10,16 @@ public class Spawning : MonoBehaviour
 
     List<GameObject> spawnPoints;
     List<GameObject> pieces;
-
-    TimedSpawn[] timedSpawns;
-    int longestTimedSpawnCount;
-    int longestTimedSpawnValue;
+    
 
     private void Start()
     {
-        timedSpawns = GetComponents<TimedSpawn>();
-        CheckWhichTimedSpawnIsLast();
         RefreshList();
     }
-
-    void CheckWhichTimedSpawnIsLast()
-    {
-        longestTimedSpawnValue = timedSpawns[0].timeDelayFromStart;
-        for (int i = 0; i < timedSpawns.Length - 1; i++)
-        {
-            if (timedSpawns[i].timeDelayFromStart > longestTimedSpawnValue)
-            {
-                longestTimedSpawnCount = i;
-                longestTimedSpawnValue = timedSpawns[i].timeDelayFromStart;
-            }
-        }
-    }
+    
 
     private void Update()
     {
-        if(timedSpawns[longestTimedSpawnCount].spawned) 
-        {
-            if(transform.childCount==0)
-            {
-                levelWon = true;
-                Debug.Log("YOU WON THIS LEVEL!!!!");
-            }
-        }
-
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             int randomMonster = (int)Random.Range(0f, monsterPrefabs.Count);
@@ -91,13 +64,5 @@ public class Spawning : MonoBehaviour
     private static int SortByName(GameObject o1, GameObject o2)
     {
         return o1.name.CompareTo(o2.name);
-    }
-
-    public void StartCountingToSpawn()
-    {
-        foreach(TimedSpawn ts in timedSpawns)
-        {
-            ts.enabled = true;
-        }
     }
 }

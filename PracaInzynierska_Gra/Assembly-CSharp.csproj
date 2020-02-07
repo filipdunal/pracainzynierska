@@ -142,7 +142,25 @@
     <Compile Include="Assets\Scripts\Weapons\ArmScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponSwitching.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Base\SingletonComponentBase.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Component\CoroutineEventPlayerBase.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Component\DelayEventPlayer.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Component\EventPlayer.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Component\EventPlayerGroup.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Component\RepeatEventPlayer.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Component\TempEventPlayer.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Examples\Scripts\ChangeScene.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Examples\Scripts\InfoLogger.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Examples\Scripts\TransformTweener.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Extension\Timeline Extension\EventPlayerPlayables\EventPlayerBehaviour.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Extension\Timeline Extension\EventPlayerPlayables\EventPlayerClip.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Extension\Timeline Extension\EventPlayerPlayables\EventPlayerMixerBehaviour.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Extension\Timeline Extension\EventPlayerPlayables\EventPlayerTrack.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Extension\Timeline Extension\TimelineEventPlayer.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Extension\UnityExtension.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Manager\CoroutineManager.cs" />
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
+    <None Include="Assets\Threeyes\EventPlayer\ReadMe.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Filip/Documents/GitHub/pracainzynierska/PracaInzynierska_Gra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

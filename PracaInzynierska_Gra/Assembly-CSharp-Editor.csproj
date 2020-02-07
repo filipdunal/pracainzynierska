@@ -103,6 +103,14 @@
     <Compile Include="Assets\Cinemachine\PostFX\Editor\CinemachinePostProcessingEditor.cs" />
     <Compile Include="Assets\Cinemachine\PostFX\Editor\PostFXAutoImport.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Editor\EditorDrawerTool.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Editor\EventPlayerHierarchyView.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Editor\EventPlayerInspector.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Extension\Timeline Extension\EventPlayerPlayables\Editor\Base\BaseClipEditor.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Extension\Timeline Extension\EventPlayerPlayables\Editor\Base\BaseEditor.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Extension\Timeline Extension\EventPlayerPlayables\Editor\Base\ReflectionHelpers.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Extension\Timeline Extension\EventPlayerPlayables\Editor\EventPlayerClipEditor.cs" />
+    <Compile Include="Assets\Threeyes\EventPlayer\Extension\Timeline Extension\EventPlayerPlayables\Editor\TimelineEventPlayerHierarchyView.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Filip/Documents/GitHub/pracainzynierska/PracaInzynierska_Gra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
