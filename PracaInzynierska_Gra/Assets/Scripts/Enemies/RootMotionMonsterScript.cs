@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZombieScript : MonoBehaviour
+public class RootMotionMonsterScript : MonoBehaviour
 {
     [Range(0.0f, 10.0f)]
     public float speedOfRootMotion = 1f;

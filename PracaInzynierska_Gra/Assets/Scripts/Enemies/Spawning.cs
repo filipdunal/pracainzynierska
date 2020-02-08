@@ -6,7 +6,6 @@ public class Spawning : MonoBehaviour
 {
     public Transform arena;
     public List<GameObject> monsterPrefabs;
-    public bool levelWon;
 
     List<GameObject> spawnPoints;
     List<GameObject> pieces;

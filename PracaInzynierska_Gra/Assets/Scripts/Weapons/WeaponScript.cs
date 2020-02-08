@@ -26,6 +26,7 @@ public class WeaponScript : MonoBehaviour
 
     Vector3 defaultPosition;
     Vector3 recoilPosition;
+
     bool shooting;
     bool reloading;
 
@@ -39,7 +40,7 @@ public class WeaponScript : MonoBehaviour
     public float degreesToRotate = -45f;
     public float speedOfRotatingGun = 5f;
     public float reloadTime = 1f;
-
+    
     Quaternion defaultRotation;
     Quaternion reloadingRotation;
 
@@ -123,6 +124,8 @@ public class WeaponScript : MonoBehaviour
     {
         StartCoroutine(Reload());
     }
+    
+
     private void Update()
     {
         ammoHud.AmmoUpdate(ammoCurrentInClip, ammoClipCapacity, ammoClipsLeft);
@@ -147,5 +150,7 @@ public class WeaponScript : MonoBehaviour
         {
             transform.localRotation = Quaternion.Lerp(transform.localRotation, defaultRotation, Time.deltaTime * speedOfRotatingGun);
         }
+
+        
     }
 }

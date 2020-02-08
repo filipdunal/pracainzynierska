@@ -123,9 +123,9 @@
     <Compile Include="Assets\Scripts\Enemies\FlyerScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\InjuryParticleScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\InjuryParticleScriptColor.cs" />
-    <Compile Include="Assets\Scripts\Enemies\MonsterScript.cs" />
+    <Compile Include="Assets\Scripts\Enemies\MonsterScript (obsolete).cs" />
+    <Compile Include="Assets\Scripts\Enemies\RootMotionMonsterScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawning.cs" />
-    <Compile Include="Assets\Scripts\Enemies\ZombieScript.cs" />
     <Compile Include="Assets\Scripts\Hud\AmmoHud.cs" />
     <Compile Include="Assets\Scripts\Hud\HealthHud.cs" />
     <Compile Include="Assets\Scripts\OneSteeringScript.cs" />
@@ -136,9 +136,13 @@
     <Compile Include="Assets\Scripts\SettingsOfUser.cs" />
     <Compile Include="Assets\Scripts\TimedSpawn.cs" />
     <Compile Include="Assets\Scripts\UI\ConnectionDetailsOpener.cs" />
-    <Compile Include="Assets\Scripts\UI\GameOverScript.cs" />
+    <Compile Include="Assets\Scripts\UI\DeadScript.cs" />
+    <Compile Include="Assets\Scripts\UI\ForcePauseInTheEndScript.cs" />
+    <Compile Include="Assets\Scripts\UI\InjuryScript.cs" />
     <Compile Include="Assets\Scripts\UI\ShowStatusOfConnection.cs" />
     <Compile Include="Assets\Scripts\UI\SwitchPages.cs" />
+    <Compile Include="Assets\Scripts\UI\SwitchPauseAfterDead.cs" />
+    <Compile Include="Assets\Scripts\UI\WinScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\ArmScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponSwitching.cs" />

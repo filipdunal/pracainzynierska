@@ -7,7 +7,12 @@ public class OneSteeringScript : MonoBehaviour
     CanvasGroup pauseMenu;
     Player player;
     WeaponSwitching weaponSwitching;
-    private void Start()
+    private void OnEnable()
+    {
+        AssignComponents();
+    }
+
+    void AssignComponents()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         weaponSwitching = GameObject.Find("Arm / Weapon holder").GetComponent<WeaponSwitching>();
@@ -40,33 +45,38 @@ public class OneSteeringScript : MonoBehaviour
     {
         if(!player.gameOver)
         {
-            player.activeAimingAndShooting = !player.activeAimingAndShooting;
-            if (Time.timeScale != 0f)
+            ForcePause();
+        }
+    }
+
+    public void ForcePause()
+    {
+        player.activeAimingAndShooting = !player.activeAimingAndShooting;
+        if (Time.timeScale != 0f)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+        if (pauseMenu != null)
+        {
+            if (pauseMenu.interactable)
             {
-                Time.timeScale = 0f;
+                pauseMenu.interactable = false;
+                pauseMenu.alpha = 0;
+                pauseMenu.blocksRaycasts = false;
             }
             else
             {
-                Time.timeScale = 1f;
-            }
-            if (pauseMenu != null)
-            {
-                if (pauseMenu.interactable)
-                {
-                    pauseMenu.interactable = false;
-                    pauseMenu.alpha = 0;
-                    pauseMenu.blocksRaycasts = false;
-                }
-                else
-                {
-                    pauseMenu.interactable = true;
-                    pauseMenu.alpha = 1;
-                    pauseMenu.blocksRaycasts = true;
-                }
+                pauseMenu.interactable = true;
+                pauseMenu.alpha = 1;
+                pauseMenu.blocksRaycasts = true;
             }
         }
-        
     }
+
     public void ShotManually()
     {
         GetComponent<CustomInputModule>().SendMouseLeftClick();

@@ -2,27 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameOverScript : MonoBehaviour
+public class InjuryScript : MonoBehaviour
 {
     Player playerScript;
-    GameObject deadPanel;
-    GameObject injuredPanel;
+    //GameObject deadPanel;
     private void Start()
     {
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        deadPanel = transform.GetChild(0).gameObject;
-        injuredPanel = transform.GetChild(1).gameObject;
+        //deadPanel = transform.GetChild(0).gameObject;
     }
 
+    /*
     public void Dead()
     {
-       playerScript.activeAimingAndShooting = false;
        playerScript.gameOver = true;
        GetComponent<Canvas>().transform.GetChild(0).GetComponent<Animator>().Play("deadScreen");
     }
+    */
 
     public void Injured()
     {
-        GetComponent<Canvas>().transform.GetChild(1).GetComponent<Animator>().Play("injuryFlash", -1, 0f);
+        GetComponent<Animator>().Play("injuryFlash", -1, 0f);
     }
 }
