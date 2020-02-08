@@ -60,18 +60,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
-    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <Compile Include="Assets\Standard Assets\Scripts\Camera\FirstPersonCameraScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Connection with smartphone\AxisSteeringScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Connection with smartphone\NetworkServerUI.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Connection with smartphone\RefreshServer.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\CustomEventSystemObjectController.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\CustomInputModule.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Enemies\DamageMonsterScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Enemies\FlyerScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Enemies\InjuryParticleScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Enemies\InjuryParticleScriptColor.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Enemies\MonsterScript (obsolete).cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Enemies\RootMotionMonsterScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Enemies\Spawning.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Hud\AmmoHud.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Hud\HealthHud.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\OneSteeringScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\PieceScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\PlayerSteeringScript (obsolete).cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ScenesScipt.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\SettingsOfUser.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\TimedSpawn.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UI\ConnectionDetailsOpener.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UI\DeadScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UI\ForcePauseInTheEndScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UI\InjuryScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UI\ShowStatusOfConnection.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UI\SwitchPages.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UI\SwitchPauseAfterDead.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\UI\WinScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Weapons\ArmScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Weapons\WeaponScript.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\Weapons\WeaponSwitching.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Filip/Documents/GitHub/pracainzynierska/PracaInzynierska_Gra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

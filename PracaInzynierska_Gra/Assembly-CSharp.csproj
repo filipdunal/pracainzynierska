@@ -113,6 +113,17 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
+    <Compile Include="Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+    <Compile Include="Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+    <Compile Include="Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+    <Compile Include="Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+    <Compile Include="Assets\CrossPlatformInput\Scripts\Joystick.cs" />
+    <Compile Include="Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+    <Compile Include="Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+    <Compile Include="Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+    <Compile Include="Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
+    <Compile Include="Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
+    <Compile Include="Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
     <Compile Include="Assets\Scripts\Camera\FirstPersonCameraScript.cs" />
     <Compile Include="Assets\Scripts\Connection with smartphone\AxisSteeringScript.cs" />
     <Compile Include="Assets\Scripts\Connection with smartphone\NetworkServerUI.cs" />
@@ -138,6 +149,7 @@
     <Compile Include="Assets\Scripts\UI\ConnectionDetailsOpener.cs" />
     <Compile Include="Assets\Scripts\UI\DeadScript.cs" />
     <Compile Include="Assets\Scripts\UI\ForcePauseInTheEndScript.cs" />
+    <Compile Include="Assets\Scripts\UI\GridOfChapters.cs" />
     <Compile Include="Assets\Scripts\UI\InjuryScript.cs" />
     <Compile Include="Assets\Scripts\UI\ShowStatusOfConnection.cs" />
     <Compile Include="Assets\Scripts\UI\SwitchPages.cs" />
@@ -164,6 +176,7 @@
     <Compile Include="Assets\Threeyes\EventPlayer\Extension\UnityExtension.cs" />
     <Compile Include="Assets\Threeyes\EventPlayer\Manager\CoroutineManager.cs" />
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
+    <None Include="Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Threeyes\EventPlayer\ReadMe.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Filip/Documents/GitHub/pracainzynierska/PracaInzynierska_Gra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -735,12 +748,6 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{A04067A4-4FA2-BE99-D526-5BEE01EA2FB1}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
