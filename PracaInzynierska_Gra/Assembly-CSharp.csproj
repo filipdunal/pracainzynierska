@@ -151,6 +151,8 @@
     <Compile Include="Assets\Scripts\UI\ForcePauseInTheEndScript.cs" />
     <Compile Include="Assets\Scripts\UI\GridOfChapters.cs" />
     <Compile Include="Assets\Scripts\UI\InjuryScript.cs" />
+    <Compile Include="Assets\Scripts\UI\QuitGame.cs" />
+    <Compile Include="Assets\Scripts\UI\ShowInputMode.cs" />
     <Compile Include="Assets\Scripts\UI\ShowStatusOfConnection.cs" />
     <Compile Include="Assets\Scripts\UI\SwitchPages.cs" />
     <Compile Include="Assets\Scripts\UI\SwitchPauseAfterDead.cs" />
@@ -175,9 +177,27 @@
     <Compile Include="Assets\Threeyes\EventPlayer\Extension\Timeline Extension\TimelineEventPlayer.cs" />
     <Compile Include="Assets\Threeyes\EventPlayer\Extension\UnityExtension.cs" />
     <Compile Include="Assets\Threeyes\EventPlayer\Manager\CoroutineManager.cs" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Threeyes\EventPlayer\ReadMe.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Filip/Documents/GitHub/pracainzynierska/PracaInzynierska_Gra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
