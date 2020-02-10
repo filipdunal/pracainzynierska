@@ -28,27 +28,35 @@ public class WeaponSwitching : MonoBehaviour
     
     public void NextWeapon()
     {
-        if(selectedWeapon>=transform.childCount-1)
+        if (Time.timeScale > 0f)
         {
-            selectedWeapon=0;
+            if (selectedWeapon >= transform.childCount - 1)
+            {
+                selectedWeapon = 0;
+            }
+            else
+            {
+                selectedWeapon++;
+            }
+            SelectWeapon();
         }
-        else
-        {
-            selectedWeapon++;
-        }
-        SelectWeapon();
+        
     }
     public void PreviousWeapon()
     {
-        if(selectedWeapon<=0)
+        if (Time.timeScale > 0f)
         {
-            selectedWeapon = transform.childCount - 1;
+            if (selectedWeapon <= 0)
+            {
+                selectedWeapon = transform.childCount - 1;
+            }
+            else
+            {
+                selectedWeapon--;
+            }
+            SelectWeapon();
         }
-        else
-        {
-            selectedWeapon--;
-        }
-        SelectWeapon();
+        
     }
     public void Shot()
     {

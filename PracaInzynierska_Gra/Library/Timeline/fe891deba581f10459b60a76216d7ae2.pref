@@ -23,7 +23,11 @@ MonoBehaviour:
   verticalScroll: 0
   m_Keys:
   - {fileID: 114149254763255266, guid: fe891deba581f10459b60a76216d7ae2, type: 2}
+  - {fileID: 114903139572858434, guid: fe891deba581f10459b60a76216d7ae2, type: 2}
   m_Vals:
+  - collapsed: 0
+    showInlineCurves: 0
+    inlineAnimationCurveHeight: 100
   - collapsed: 0
     showInlineCurves: 0
     inlineAnimationCurveHeight: 100
