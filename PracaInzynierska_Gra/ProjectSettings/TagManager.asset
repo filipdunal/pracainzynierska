@@ -45,3 +45,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: My UI layer
+    uniqueID: 613185589
+    locked: 0

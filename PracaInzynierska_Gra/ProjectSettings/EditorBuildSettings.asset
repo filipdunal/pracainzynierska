@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/mainMenu.unity
     guid: 6e1d1e5253a180f4bacbeb172c34214c
-  - enabled: 0
-    path: Assets/Scenes/playingSceneTemplate.unity
-    guid: 245ad0dfb07a213438a56accde0f7e20
   - enabled: 1
     path: Assets/Scenes/Arena chapter01.unity
     guid: af2b457054805c046ac767b9e3887ab3
+  - enabled: 0
+    path: Assets/Scenes/playingSceneTemplate.unity
+    guid: 245ad0dfb07a213438a56accde0f7e20
   m_configObjects: {}

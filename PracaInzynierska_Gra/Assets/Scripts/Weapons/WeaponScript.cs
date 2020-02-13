@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
+    [Header("Audio clips")]
+    public AudioClip shotSound;
+    public AudioClip reloadSound;
+    public AudioClip outOfAmmoSound;
+
+    public AudioSource audioSource;
+
     ArmScript armScript;
     ParticleSystem muzzleFlash;
     
@@ -59,6 +66,7 @@ public class WeaponScript : MonoBehaviour
     }
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         defaultRotation = transform.localRotation;
 
         ammoCurrentInClip = ammoClipCapacity;
@@ -78,6 +86,8 @@ public class WeaponScript : MonoBehaviour
             {
                 nextTimeToFire = Time.time + 1f / fireRate;
                 muzzleFlash.Play();
+                audioSource.PlayOneShot(shotSound);
+
                 if (armScript.targetObject != null && armScript.targetObject.tag == "Monster")
                 {
                     armScript.targetObject.GetComponent<DamageMonsterScript>().TakeDamage(damageOfBullet);
@@ -111,13 +121,18 @@ public class WeaponScript : MonoBehaviour
         {
             if(!reloading)
             {
+                audioSource.PlayOneShot(reloadSound);
                 reloading = true;
                 yield return new WaitForSeconds(reloadTime);
                 reloading = false;
                 ammoClipsLeft--;
                 ammoCurrentInClip = ammoClipCapacity;
             }
-        } 
+        }
+        else
+        {
+            audioSource.PlayOneShot(outOfAmmoSound);
+        }
     }
 
     public void StartReloading()

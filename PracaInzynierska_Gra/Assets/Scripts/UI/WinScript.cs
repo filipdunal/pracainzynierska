@@ -15,6 +15,7 @@ public class WinScript : MonoBehaviour
         playerScript.gameOver = true;
         //playerScript.gameWon = true;
         GetComponent<Animator>().Play("winScreen");
+        GameObject.FindObjectOfType<SettingsOfUser>().SaveProgress(0);
 
         //DO SAVING GAME HERE
     }
