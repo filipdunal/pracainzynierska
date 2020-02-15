@@ -6,6 +6,7 @@ using UnityEngine;
 public class Weapon
 {
     public string name;
+    public string prefabName;
     public bool unlocked;
     public int type;
 }

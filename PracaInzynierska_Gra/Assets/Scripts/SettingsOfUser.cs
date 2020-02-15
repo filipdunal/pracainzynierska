@@ -24,7 +24,15 @@ public class SettingsOfUser : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public string _chapterToLaunch;
+    public string chapterToLaunch
+    {
+       get { return _chapterToLaunch; }
+       set { _chapterToLaunch = value; }
+    }
     
+    public Weapon[] weapons;
     public Chapter[] chapters;
     public void GoToChapter(string title)
     {
@@ -73,8 +81,18 @@ public class SettingsOfUser : MonoBehaviour
         else
         {
             Debug.LogWarning("Title to unlock is empty");
+        }   
+    }
+
+    void UnlockNextWeapon(string title)
+    {
+        if(title!="")
+        {
+            foreach(Weapon w in weapons)
+            {
+                //if(title == w.prefabName)
+            }
         }
-        
     }
     public void SaveData() { }
     public void LoadData() { }
