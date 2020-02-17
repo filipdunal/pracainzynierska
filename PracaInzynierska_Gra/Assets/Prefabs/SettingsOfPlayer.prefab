@@ -43,9 +43,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0ce64d38575b048afb4d1aaa8de513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _chapterToLaunch: 
+  weapons:
+  - name: Shotgun
+    prefabName: shotgun
+    unlocked: 0
+    chosen: 0
+    type: 0
+  - name: AK
+    prefabName: ak
+    unlocked: 0
+    chosen: 0
+    type: 0
+  - name: Pistol
+    prefabName: pistolPrefab
+    unlocked: 1
+    chosen: 0
+    type: 0
+  - name: Pistol old
+    prefabName: Pistol
+    unlocked: 0
+    chosen: 0
+    type: 0
+  - name: Pistol
+    prefabName: Machine gun
+    unlocked: 0
+    chosen: 0
+    type: 0
   chapters:
   - name: Tutorial
     fileName: Arena chapter01
     unlocked: 1
     passed: 0
     highestScore: 0
+    passingUnlocksLevel: 
+    passingUnlocksWeapon: shotgun

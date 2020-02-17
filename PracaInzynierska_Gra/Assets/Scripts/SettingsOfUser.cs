@@ -98,10 +98,23 @@ public class SettingsOfUser : MonoBehaviour
             }
         }
     }
-    public void SaveData() { }
-    public void LoadData() { }
+    public void SaveData()
+    {
+        SaveSystem.SaveData(this);
+    }
+    public void LoadData()
+    {
+        SettingsOfUserData data;
+        if (SaveSystem.LoadData()!=null)
+        {
+            data = SaveSystem.LoadData();
+            nick = data.nick;
+            lastUsedNetworkPort = data.lastUsedNetworkPort;
+            weapons = data.weapons;
+            chapters = data.chapters;
+        } 
 
-    ////////////////////////////
+    }
 
 
 

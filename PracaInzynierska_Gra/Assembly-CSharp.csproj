@@ -124,6 +124,8 @@
     <Compile Include="Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
     <Compile Include="Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
     <Compile Include="Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+    <Compile Include="Assets\GoToChapter.cs" />
+    <Compile Include="Assets\LoadData.cs" />
     <Compile Include="Assets\Scripts\Camera\FirstPersonCameraScript.cs" />
     <Compile Include="Assets\Scripts\Chapter.cs" />
     <Compile Include="Assets\Scripts\Connection with smartphone\AxisSteeringScript.cs" />
@@ -147,8 +149,10 @@
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerSteeringScript (obsolete).cs" />
     <Compile Include="Assets\Scripts\PlaySelectedChapter.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\ScenesScipt.cs" />
     <Compile Include="Assets\Scripts\SettingsOfUser.cs" />
+    <Compile Include="Assets\Scripts\SettingsOfUserData.cs" />
     <Compile Include="Assets\Scripts\Sound\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Sound\Sound.cs" />
     <Compile Include="Assets\Scripts\TimedSpawn.cs" />

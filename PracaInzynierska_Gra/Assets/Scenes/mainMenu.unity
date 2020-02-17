@@ -1908,6 +1908,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3499541a3dda824cb886827d4082688, type: 3}
+--- !u!1 &479794894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 479794896}
+  - component: {fileID: 479794895}
+  m_Layer: 0
+  m_Name: GoToChapter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &479794895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479794894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13b028d45d0984419ed6f27dd01269d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &479794896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479794894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &492352397
 GameObject:
   m_ObjectHideFlags: 0
@@ -3017,34 +3060,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
-        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7228913691678869642}
-    - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Arena chapter01
-      objectReference: {fileID: 0}
-    - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_chapterToLaunch
-      objectReference: {fileID: 0}
-    - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 479794895}
     - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -3052,49 +3070,9 @@ PrefabInstance:
       objectReference: {fileID: 1554232958}
     - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
-        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1264726961}
-    - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 772547369952496377, guid: c1dd7e91f00be3647a7de3cedfefde80,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3513456174864244901, guid: c1dd7e91f00be3647a7de3cedfefde80,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6185,113 +6163,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
         type: 3}
-      propertyPath: weapons.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
       propertyPath: chapters.Array.data[0].sceneID
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[0].name
-      value: Shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[0].prefabName
-      value: shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[0].unlocked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[1].name
-      value: AK
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[1].prefabName
-      value: ak
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[1].unlocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[2].name
-      value: Pistol
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[2].prefabName
-      value: pistolPrefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[2].unlocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[3].name
-      value: Pistol old
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[3].prefabName
-      value: Pistol
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[3].unlocked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[4].name
-      value: Pistol
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[4].prefabName
-      value: Machine gun
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[4].unlocked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: chapters.Array.data[0].passingUnlocksWeapon
-      value: shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-        type: 3}
-      propertyPath: weapons.Array.data[2].chosen
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaf5269a0dc9fb24e88a4baa97f999c2, type: 3}
---- !u!114 &7228913691678869642 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7228913691193750014, guid: eaf5269a0dc9fb24e88a4baa97f999c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 7228913691678869640}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d0ce64d38575b048afb4d1aaa8de513, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8167130607664851929
 PrefabInstance:
   m_ObjectHideFlags: 0
