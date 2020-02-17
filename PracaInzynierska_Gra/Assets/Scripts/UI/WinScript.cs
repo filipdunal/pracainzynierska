@@ -13,7 +13,6 @@ public class WinScript : MonoBehaviour
     public void Win()
     {
         playerScript.gameOver = true;
-        //playerScript.gameWon = true;
         GetComponent<Animator>().Play("winScreen");
         GameObject.FindObjectOfType<SettingsOfUser>().SaveProgress(0);
 

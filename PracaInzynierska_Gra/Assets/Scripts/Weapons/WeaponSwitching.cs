@@ -5,8 +5,16 @@ using UnityEngine;
 public class WeaponSwitching : MonoBehaviour
 {
     int selectedWeapon = 0;
+
+    //Coroutine is used here because weapons gameobjects have to be selected only after deleting not used ones
     private void Start()
     {
+        StartCoroutine(DelayedSelectWeapon());
+    }
+
+    IEnumerator DelayedSelectWeapon()
+    {
+        yield return new WaitUntil(() => GetComponent<LoadChosenWeapons>().notChosenWeaponsDeleted);
         SelectWeapon();
     }
     void SelectWeapon()
@@ -62,6 +70,9 @@ public class WeaponSwitching : MonoBehaviour
     {
         transform.GetChild(selectedWeapon).GetComponent<WeaponScript>().Shot();
     }
-    
-    
+    private void Update()
+    {
+    }
+
+
 }

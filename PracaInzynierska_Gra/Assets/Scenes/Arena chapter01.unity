@@ -2238,11 +2238,16 @@ PlayableDirector:
     value: {fileID: 0}
   m_ExposedReferences:
     m_References:
+    - e6bc23a30c6ddb349b0c1143b3ecd993: {fileID: 548156709}
     - cf203d06f96885d43931ea64d309507f: {fileID: 1405813692}
     - 66ecfa977c4d7f74cb27c4f1ffbfe80c: {fileID: 1335679559}
     - 43988ef481fc0304b96ba26af872e3fa: {fileID: 1405813692}
+    - 6f66f4f5ce8958546a2f25e7232f2da2: {fileID: 516084013}
     - 37445d309feceac479a2ea2cc93e14fd: {fileID: 1727598264}
     - 09052bb0a9ff0e642b8578b00574c9f1: {fileID: 1727598264}
+    - b22d4b80dbee4fd409346b733de1f69f: {fileID: 1199566081}
+    - c65a0b14ff76bfd4d8c36e10621215a3: {fileID: 1509200290}
+    - 259875407bfa3b54fb6f639d33f99d6d: {fileID: 1335679559}
     - 60f5cdfa32571f44782287f17f8d11e9: {fileID: 0}
     - 6ecdadf9290875b48a1b11b90b0d628d: {fileID: 1509200290}
     - 86abb12aa22940e4b82a7c5f30578820: {fileID: 1727598264}
@@ -2251,12 +2256,14 @@ PlayableDirector:
     - fa3df2ec69fe7c7429eaf19474efea25: {fileID: 1727598264}
     - c1fc0a3af78c70840a7e20fd7da412d5: {fileID: 1727598264}
     - da135f1d11fbcfd4b9969573c5b0fa59: {fileID: 1335679559}
+    - 7e925d2ee8324e649aebfcff4601307a: {fileID: 1727598264}
     - 739643c176e4287479b4dac7373b0c8c: {fileID: 1199566081}
     - 309eb424609b66e46b795e9424097ea8: {fileID: 1468270649}
     - 66c6b5ea58dfb1a4f9bb1aa3993c11a3: {fileID: 1335679559}
     - 2ef0eceb5d37ea04da58dedd5e62c6e5: {fileID: 1727598264}
     - 20e14a7366f78d848bbc2b531315fc48: {fileID: 1335679559}
     - 46108daa9a3a1e342ae3b4c771e8a443: {fileID: 1335679559}
+    - 84af40c62a6737f449452db384625969: {fileID: 1468270649}
 --- !u!4 &728934418
 Transform:
   m_ObjectHideFlags: 0
@@ -2455,6 +2462,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524082316387089255, guid: 76849702a1246d449931452c526f8e10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5524082316386985799, guid: 76849702a1246d449931452c526f8e10,
         type: 3}
@@ -5169,6 +5181,7 @@ GameObject:
   - component: {fileID: 2141791816}
   - component: {fileID: 2141791817}
   - component: {fileID: 2141791818}
+  - component: {fileID: 2141791819}
   m_Layer: 2
   m_Name: Arm / Weapon holder
   m_TagString: Untagged
@@ -5219,6 +5232,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 870cfcf2eb99c2c44a19d9247b53b6b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2141791819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141791815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9f81e81cf764c40be6ef4627eabb09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1563730774416274258 stripped

@@ -56,7 +56,8 @@ public class SettingsOfUser : MonoBehaviour
             {
                 ch.passed = true;
                 // ch.highestScore = ....
-                UnlockNextChapter(ch.whatPassingUnlocks);
+                UnlockNextChapter(ch.passingUnlocksLevel);
+                UnlockNextWeapon(ch.passingUnlocksWeapon);
                 SaveData();
                 return;
             }
@@ -90,7 +91,10 @@ public class SettingsOfUser : MonoBehaviour
         {
             foreach(Weapon w in weapons)
             {
-                //if(title == w.prefabName)
+                if(title == w.prefabName)
+                {
+                    w.unlocked = true;
+                }
             }
         }
     }

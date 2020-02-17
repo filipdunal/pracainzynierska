@@ -11,5 +11,7 @@ public class Chapter
     public bool passed;
     public int highestScore;
 
-    public string whatPassingUnlocks;
+    //public string whatPassingUnlocks;
+    public string passingUnlocksLevel;
+    public string passingUnlocksWeapon;
 }

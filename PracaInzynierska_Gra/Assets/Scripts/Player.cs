@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
     public bool gameOver;
     public bool spawningCompleted;
-    public bool gameWon;
+    //public bool gameWon;
 
     [HideInInspector] public int healthMax;
     InjuryScript injuryScript;
