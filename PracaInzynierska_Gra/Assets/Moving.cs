@@ -42,13 +42,15 @@ public class Moving : MonoBehaviour
         else
         {
             movingCompleted = true;
+            GetComponent<Player>().reachedFinalWaypoint = true;
+            
         }
     }
     private void Update()
     {
         if(!movingCompleted)
         {
-            lookingAt = Quaternion.Lerp(lookingAt, Quaternion.LookRotation(currentWaypoint.position - transform.position),Time.deltaTime*lookRotationLerp);
+            lookingAt = Quaternion.Lerp(lookingAt, Quaternion.LookRotation(currentWaypoint.position - transform.position),Time.deltaTime*lookRotationLerp*(movementSpeed/walkSpeed));
             transform.rotation = lookingAt;
             transform.position += transform.forward * Time.deltaTime * movementSpeed;
         }

@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public bool activeAimingAndShooting;
 
     public bool gameOver;
-    public bool spawningCompleted;
+    public bool reachedFinalWaypoint;
     //public bool gameWon;
 
     [HideInInspector] public int healthMax;
@@ -45,16 +45,11 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if(!winScriptLaunched && health>0 && spawningCompleted && EnemiesObject.childCount==0)
+        if(!winScriptLaunched && health>0 && reachedFinalWaypoint && EnemiesObject.childCount==0)
         {
             winScriptLaunched = true;
             winScript.Win();
         }
-    }
-
-    public void SpawningCompleted()
-    {
-        spawningCompleted = true;
     }
 
 
