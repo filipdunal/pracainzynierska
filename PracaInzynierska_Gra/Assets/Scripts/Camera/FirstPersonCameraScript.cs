@@ -22,7 +22,7 @@ public class FirstPersonCameraScript : MonoBehaviour
     private void Start()
     {
         rotationOffset = Vector3.zero;
-        originalRotation = transform.rotation;
+        originalRotation = transform.localRotation;
 
         player =GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         vcam = GetComponent<CinemachineVirtualCamera>();
@@ -40,7 +40,7 @@ public class FirstPersonCameraScript : MonoBehaviour
 
             rotationToSet = originalRotation * Quaternion.Euler(rotationOffset);
         }
-        transform.rotation = Quaternion.Lerp(transform.rotation, rotationToSet, Time.deltaTime * smoothRate);
+        transform.localRotation = Quaternion.Lerp(transform.localRotation, rotationToSet, Time.deltaTime * smoothRate);
         
     }
 

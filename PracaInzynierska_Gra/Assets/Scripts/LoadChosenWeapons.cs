@@ -7,10 +7,16 @@ public class LoadChosenWeapons : MonoBehaviour
     //Coroutine is used here because SettingsOfUser is not fully loaded during first frame of this scene.
     //WaitingForEndOfFrame makes us sure that we called function LoadWeapons as last one.
 
-    public bool notChosenWeaponsDeleted;
+    public bool giveMeAllWeapons;
+    [HideInInspector] public bool notChosenWeaponsDeleted;
+
     void Start()
     {
-        StartCoroutine(LoadWeapons());
+        if(!giveMeAllWeapons)
+        {
+            StartCoroutine(LoadWeapons());
+        }
+        
     }
     
     IEnumerator LoadWeapons()

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/startingScene.unity
+- path: Assets/Scenes/Arena chapter01.unity
   isLoaded: 1
   isActive: 1

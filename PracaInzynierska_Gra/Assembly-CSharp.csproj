@@ -125,7 +125,9 @@
     <Compile Include="Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
     <Compile Include="Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
     <Compile Include="Assets\GoToChapter.cs" />
+    <Compile Include="Assets\GoToNextWaypoint.cs" />
     <Compile Include="Assets\LoadData.cs" />
+    <Compile Include="Assets\Moving.cs" />
     <Compile Include="Assets\Scripts\Camera\FirstPersonCameraScript.cs" />
     <Compile Include="Assets\Scripts\Chapter.cs" />
     <Compile Include="Assets\Scripts\Connection with smartphone\AxisSteeringScript.cs" />
@@ -140,6 +142,7 @@
     <Compile Include="Assets\Scripts\Enemies\InjuryParticleScriptColor.cs" />
     <Compile Include="Assets\Scripts\Enemies\MonsterScript (obsolete).cs" />
     <Compile Include="Assets\Scripts\Enemies\RootMotionMonsterScript.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Spawn.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawning.cs" />
     <Compile Include="Assets\Scripts\Hud\AmmoHud.cs" />
     <Compile Include="Assets\Scripts\Hud\HealthHud.cs" />
