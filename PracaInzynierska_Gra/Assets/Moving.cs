@@ -20,24 +20,21 @@ public class Moving : MonoBehaviour
     {
         currentWaypointId = 0;
         currentWaypoint = wayPoints[0];
+
+        UpdateColliders();
+        currentWaypoint.gameObject.GetComponent<BoxCollider>().enabled = true;
+
         lookingAt = transform.rotation;
         movementSpeed = walkSpeed;
     }
 
-    public void NextWaypoint(bool run)
+    public void NextWaypoint()
     {
         if(wayPoints.Capacity>(currentWaypointId+1))
         {
             currentWaypointId++;
             currentWaypoint = wayPoints[currentWaypointId];
-            if(run)
-            {
-                movementSpeed = runSpeed;
-            }
-            else
-            {
-                movementSpeed = walkSpeed;
-            }
+            UpdateColliders();
         }
         else
         {
@@ -45,6 +42,34 @@ public class Moving : MonoBehaviour
             GetComponent<Player>().reachedFinalWaypoint = true;
             
         }
+    }
+
+    public void SetSpeed(int speed)
+    {
+        switch(speed)
+        {
+            case 0:
+                movementSpeed = 0;
+                break;
+            case 1:
+                movementSpeed = walkSpeed;
+                break;
+            case 2:
+                movementSpeed = runSpeed;
+                break;
+            default:
+                break;
+        }
+    }
+
+    void UpdateColliders()
+    {
+        foreach (Transform wp in wayPoints)
+        {
+            wp.GetComponent<BoxCollider>().enabled = false;
+        }
+        currentWaypoint.gameObject.GetComponent<BoxCollider>().enabled = true;
+
     }
     private void Update()
     {

@@ -1,7 +1,8 @@
 Win64
 PlayerPath?
-C:/Users/Filip/Documents/Praca inzynierska builds/Build43/PracaInzynierska_Gra.exe
+C:/Users/MacbookWinF/Documents/Praca inzynierska builds/Build05/PracaInzynierska_Gra.exe
 SceneListBegin?
+Assets/Scenes/startingScene.unity
 Assets/Scenes/mainMenu.unity
 Assets/Scenes/Arena chapter01.unity
 SceneListEnd?
@@ -36,7 +37,7 @@ a770ada2daf21fd0337aa2b35fe7fce7 Assembly-CSharp.dll:.InjuryParticleScriptColor
 f4c793973fff69ea0ba9596757032674 Assembly-CSharp.dll:.FlyerScript
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.CustomEventSystemObjectController
 767b65c02f4801675f1beca0afb5de2f Assembly-CSharp.dll:Threeyes.EventPlayer.EventPlayerClip
-f4a095cba6d3c37f45a8dfa5ab9ac652 Assembly-CSharp.dll:.GoToNextWaypoint
+a557248543ea591bc314f0e4633c0ed9 Assembly-CSharp.dll:.GoToNextWaypoint
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 507174d46dacbc5fe45e28485db5dd1e UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -150,6 +151,7 @@ b17a6e79c527e4f4ebd09197069462e1 Assembly-CSharp.dll:Threeyes.EventPlayer.Exampl
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 32f6d1d5a09e5c94c633a32edd3e6836 Unity.ProBuilder.dll:UnityEngine.ProBuilder.BezierShape
 d6cd10e1698db3d2310958669ca2c61b Assembly-CSharp.dll:.Moving
+d4a493bb4307ddafb51da21aff3cd832 Assembly-CSharp.dll:Cinemachine.PostFX.CinemachinePostProcessing
 ab36ced446fbfea4462afaf79c72454e Assembly-CSharp.dll:Cinemachine.NoiseSettings
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
