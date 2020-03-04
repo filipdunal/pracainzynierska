@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4850070771934195686}
   - component: {fileID: 4850070771934195687}
   - component: {fileID: 5926240783635382779}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WayPoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,4 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cbe0fb181f801d419e86e013cb338a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  run: 0
+  speed: 0
+  holdUntilAreaIsFreeFromMonsters: 0
+  holdForSeconds: 0

@@ -87,10 +87,11 @@ public class WeaponScript : MonoBehaviour
                 nextTimeToFire = Time.time + 1f / fireRate;
                 muzzleFlash.Play();
                 audioSource.PlayOneShot(shotSound);
-
+                
                 if (armScript.targetObject != null && armScript.targetObject.tag == "Monster")
                 {
                     armScript.targetObject.GetComponent<DamageMonsterScript>().TakeDamage(damageOfBullet);
+                    
                 }
 
                 //StopAllCoroutines();

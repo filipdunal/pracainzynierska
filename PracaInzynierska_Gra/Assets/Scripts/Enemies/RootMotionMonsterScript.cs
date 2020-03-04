@@ -9,20 +9,26 @@ public class RootMotionMonsterScript : MonoBehaviour
     Transform player;
     Vector3 destination;
     Animator animator;
+
+    public bool triggered;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        destination = player.position;
-        transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
-        destination.y = 0f;
-        transform.LookAt(destination);
         animator = GetComponent<Animator>();
+        animator.speed = 0f;
     }
     private void Update()
     {
-        if(speedOfRootMotion>0f)
+        if(triggered)
         {
-            animator.speed = speedOfRootMotion;
+            destination = player.position;
+            destination.y = transform.position.y;
+            transform.LookAt(destination);
+            if (speedOfRootMotion > 0f)
+            {
+                animator.speed = speedOfRootMotion;
+            }
         }
+        
     }
 }
