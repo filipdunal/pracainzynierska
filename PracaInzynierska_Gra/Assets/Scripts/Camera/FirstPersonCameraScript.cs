@@ -7,6 +7,7 @@ public class FirstPersonCameraScript : MonoBehaviour
 {
     public float rotationOffsetStrength;
     public float smoothRate;
+    public float speedOfChangingFOV = 10f;
 
     Vector3 rotationOffset;
     Quaternion originalRotation;
@@ -17,6 +18,8 @@ public class FirstPersonCameraScript : MonoBehaviour
 
     Player player;
     CinemachineVirtualCamera vcam;
+    CinemachineBasicMultiChannelPerlin perlin;
+    float targetFOV = 40f;
 
 
     private void Start()
@@ -26,6 +29,7 @@ public class FirstPersonCameraScript : MonoBehaviour
 
         player =GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         vcam = GetComponent<CinemachineVirtualCamera>();
+        perlin = vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 
     }
     private void Update()
@@ -41,11 +45,22 @@ public class FirstPersonCameraScript : MonoBehaviour
             rotationToSet = originalRotation * Quaternion.Euler(rotationOffset);
         }
         transform.localRotation = Quaternion.Lerp(transform.localRotation, rotationToSet, Time.deltaTime * smoothRate);
-        
+        vcam.m_Lens.FieldOfView = Mathf.Lerp(vcam.m_Lens.FieldOfView,targetFOV,Time.deltaTime*speedOfChangingFOV);
+
     }
 
     public void SetAdrenaline(float value)
     {
         vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = value;
+    }
+
+    public void SetFOV(float fov)
+    {
+        targetFOV= fov;
+    }
+
+    public void SetNoiseAmplitude(float noise)
+    {
+        perlin.m_AmplitudeGain = noise;
     }
 }

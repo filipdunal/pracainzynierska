@@ -8,9 +8,8 @@ public class GoToNextWaypoint : MonoBehaviour
     public bool holdUntilAreaIsFreeFromMonsters;
     MonsterDetector monsterDetector;
 
-
     Transform enemiesFolder;
-    public float holdForSeconds = 0f;
+    public int holdSpeed = 0;
     Moving moving;
 
     private void Start()
@@ -22,48 +21,39 @@ public class GoToNextWaypoint : MonoBehaviour
         if(other.tag=="Player")
         {
             moving = other.GetComponent<Moving>();
-            if(!holdUntilAreaIsFreeFromMonsters)
+            moving.NextWaypoint();
+            if (!holdUntilAreaIsFreeFromMonsters)
             {
-                if (holdForSeconds == 0)
+                moving.SetSpeed(speed);
+            }
+            else
+            {
+                if(monsterDetector.thereAreMonsters)
                 {
-                    moving.NextWaypoint();
-                    moving.SetSpeed(speed);
+                    moving.SetSpeed(holdSpeed);
+                    StartCoroutine(Hold(0.5f));
                 }
                 else
                 {
-                    moving.SetSpeed(0);
-                    StartCoroutine(Hold(holdForSeconds));
+                    moving.SetSpeed(speed);
                 }
             }
             
         }
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if(other.tag=="Player")
-        {
-            if(holdUntilAreaIsFreeFromMonsters)
-            {
-                if(monsterDetector.thereAreMonsters)
-                {
-                    moving.SetSpeed(0);
-                }
-                else
-                {
-                    moving.SetSpeed(speed);
-                    moving.NextWaypoint();
-                }
-                
-            }
-        }
-    }
-
     IEnumerator Hold(float seconds)
     {
         yield return new WaitForSecondsRealtime(seconds);
-        moving.NextWaypoint();
-        moving.SetSpeed(speed);
+        if(monsterDetector.thereAreMonsters)
+        {
+            StartCoroutine(Hold(0.5f));
+        }
+        else
+        {
+            moving.SetSpeed(speed);
+        }
+        
     }
 
 }

@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AttackPlayer.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
@@ -178,6 +179,7 @@
     <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponSwitching.cs" />
+    <Compile Include="Assets\SeePlayer.cs" />
     <Compile Include="Assets\Threeyes\EventPlayer\Base\SingletonComponentBase.cs" />
     <Compile Include="Assets\Threeyes\EventPlayer\Component\CoroutineEventPlayerBase.cs" />
     <Compile Include="Assets\Threeyes\EventPlayer\Component\DelayEventPlayer.cs" />

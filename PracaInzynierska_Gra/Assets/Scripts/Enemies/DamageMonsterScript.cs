@@ -13,16 +13,6 @@ public class DamageMonsterScript : MonoBehaviour
     {
         maxHealth = health;
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            other.gameObject.GetComponent<Player>().TakeDamage(attackStrength);
-            Destroy(gameObject);
-        }
-    }
-
     public void TakeDamage(int strength)
     {
         health -= strength;
@@ -34,6 +24,12 @@ public class DamageMonsterScript : MonoBehaviour
     }
     void Die()
     {
+        transform.position = new Vector3(0, 1000, 0);
+        StartCoroutine(DestroyMeNextFrame());
+    }
+    IEnumerator DestroyMeNextFrame()
+    {
+        yield return 0;
         Destroy(gameObject);
     }
 

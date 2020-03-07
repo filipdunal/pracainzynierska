@@ -5,8 +5,23 @@ using UnityEngine;
 public class Moving : MonoBehaviour
 {
     float movementSpeed;
+
+    [Header("Moving speed")]
+    public float slowWalkSpeed = 0.5f;
     public float walkSpeed = 1f;
     public float runSpeed = 2f;
+
+    [Header("FOV while moving")]
+    public float idleFOV = 40f;
+    public float slowWalkFOV = 40f;
+    public float walkFOV = 40f;
+    public float runFOV = 40f;
+
+    [Header("Noise while moving")]
+    public float idleNoise = 0.2f;
+    public float slowWalkNoise = 0.2f;
+    public float walkNoise = 0.2f;
+    public float runNoise = 0.2f;
 
 
     public float lookRotationLerp = 1f;
@@ -15,6 +30,7 @@ public class Moving : MonoBehaviour
     int currentWaypointId;
     bool movingCompleted;
     Quaternion lookingAt;
+    FirstPersonCameraScript fpsCamera;
 
     private void Start()
     {
@@ -26,6 +42,8 @@ public class Moving : MonoBehaviour
 
         lookingAt = transform.rotation;
         movementSpeed = walkSpeed;
+
+        fpsCamera = GetComponentInChildren<FirstPersonCameraScript>();
     }
 
     public void NextWaypoint()
@@ -50,12 +68,23 @@ public class Moving : MonoBehaviour
         {
             case 0:
                 movementSpeed = 0;
+                fpsCamera.SetFOV(idleFOV);
+                fpsCamera.SetNoiseAmplitude(idleNoise);
                 break;
             case 1:
-                movementSpeed = walkSpeed;
+                movementSpeed = slowWalkSpeed;
+                fpsCamera.SetFOV(slowWalkFOV);
+                fpsCamera.SetNoiseAmplitude(slowWalkNoise);
                 break;
             case 2:
+                movementSpeed = walkSpeed;
+                fpsCamera.SetFOV(walkFOV);
+                fpsCamera.SetNoiseAmplitude(walkNoise);
+                break;
+            case 3:
                 movementSpeed = runSpeed;
+                fpsCamera.SetFOV(runFOV);
+                fpsCamera.SetNoiseAmplitude(runNoise);
                 break;
             default:
                 break;
