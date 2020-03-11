@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class ArmScript : MonoBehaviour
 {
@@ -9,11 +10,19 @@ public class ArmScript : MonoBehaviour
     [HideInInspector] public Vector3 targetPoint;
     Player playerScript;
     Camera cam;
+    float hitDistance = 5f;
+
+    PostProcessVolume postProcessVolume;
+    DepthOfField depthOfField;
     private void Start()
     {
         weaponSwitching = GetComponent<WeaponSwitching>();
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         cam = GameObject.Find("Camera").GetComponent<Camera>();
+
+        
+        postProcessVolume = FindObjectOfType<PostProcessVolume>();
+        postProcessVolume.profile.TryGetSettings(out depthOfField);
     }
     private void Update()
     {
@@ -25,6 +34,7 @@ public class ArmScript : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100))
             {
                 targetObject = hit.transform;
+                hitDistance = Vector3.Distance(transform.position, hit.point);
             }
             else
             {
@@ -32,6 +42,13 @@ public class ArmScript : MonoBehaviour
             }
         }
         transform.LookAt(targetPoint);
-        //transform.rotation *= offsetRotation;
+        SetFocus();
+        Debug.Log(depthOfField.focusDistance.value);
+
+    }
+
+    void SetFocus()
+    {
+        depthOfField.focusDistance.value = hitDistance;
     }
 }
