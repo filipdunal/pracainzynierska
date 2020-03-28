@@ -50,31 +50,42 @@ MonoBehaviour:
     unlocked: 0
     chosen: 0
     type: 0
-  - name: AK
-    prefabName: ak
+  - name: Machine gun
+    prefabName: machineGun
     unlocked: 0
     chosen: 0
     type: 0
   - name: Pistol
-    prefabName: pistolPrefab
+    prefabName: pistol
     unlocked: 1
     chosen: 0
     type: 0
-  - name: Pistol old
-    prefabName: Pistol
-    unlocked: 0
-    chosen: 0
-    type: 0
-  - name: Pistol
-    prefabName: Machine gun
-    unlocked: 0
-    chosen: 0
-    type: 0
   chapters:
-  - name: Tutorial
+  - name: Chapter 1
     fileName: Arena chapter01
     unlocked: 1
     passed: 0
     highestScore: 0
-    passingUnlocksLevel: 
+    passingUnlocksLevel: Arena chapter02
+    passingUnlocksWeapon: 
+  - name: Chapter 2
+    fileName: Arena chapter02
+    unlocked: 0
+    passed: 0
+    highestScore: 0
+    passingUnlocksLevel: Arena chapter03
     passingUnlocksWeapon: shotgun
+  - name: Chapter 3
+    fileName: Arena chapter03
+    unlocked: 0
+    passed: 0
+    highestScore: 0
+    passingUnlocksLevel: Arena chapter04
+    passingUnlocksWeapon: machineGun
+  - name: Chapter 4
+    fileName: Arena chapter04
+    unlocked: 0
+    passed: 0
+    highestScore: 0
+    passingUnlocksLevel: 
+    passingUnlocksWeapon: 

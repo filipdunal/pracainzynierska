@@ -10,6 +10,13 @@ public class Player : MonoBehaviour
 
     public bool gameOver;
     public bool reachedFinalWaypoint;
+
+    [Header("Audio clips")]
+    public List<AudioClip> injuredSounds;
+    public List<AudioClip> deadSounds;
+
+    AudioSource audioSource;
+    
     //public bool gameWon;
 
     [HideInInspector] public int healthMax;
@@ -21,6 +28,7 @@ public class Player : MonoBehaviour
     
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         winScript = GameObject.Find("Win").GetComponent<WinScript>();
         EnemiesObject = GameObject.Find("Enemies").transform;
         healthMax = health;
@@ -34,6 +42,12 @@ public class Player : MonoBehaviour
         if(health<=0)
         {
             deadScript.Dead();
+            audioSource.PlayOneShot(deadSounds[(int)Random.Range(0f, deadSounds.Capacity-1)]);
+            
+        }
+        else
+        {
+            audioSource.PlayOneShot(injuredSounds[(int)Random.Range(0f, injuredSounds.Capacity-1)]);
         }
 
     }
@@ -50,6 +64,7 @@ public class Player : MonoBehaviour
             winScriptLaunched = true;
             winScript.Win();
         }
+        
     }
 
 

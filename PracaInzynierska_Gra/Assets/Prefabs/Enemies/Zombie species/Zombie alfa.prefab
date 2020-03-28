@@ -7,20 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8810559668965843019, guid: f579a8221a433e044b2bbde3b34947ab,
-        type: 3}
-      propertyPath: health
-      value: 125
-      objectReference: {fileID: 0}
-    - target: {fileID: 1428217011272798320, guid: f579a8221a433e044b2bbde3b34947ab,
-        type: 3}
-      propertyPath: speedOfRootMotion
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5028151082193196372, guid: f579a8221a433e044b2bbde3b34947ab,
         type: 3}
       propertyPath: m_Name
-      value: Zombie red
+      value: Zombie alfa
       objectReference: {fileID: 0}
     - target: {fileID: 5028151082192767284, guid: f579a8221a433e044b2bbde3b34947ab,
         type: 3}
@@ -76,6 +66,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428217011272798320, guid: f579a8221a433e044b2bbde3b34947ab,
+        type: 3}
+      propertyPath: speedOfRootMotion
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8810559668965843019, guid: f579a8221a433e044b2bbde3b34947ab,
+        type: 3}
+      propertyPath: health
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 5028151082204764198, guid: f579a8221a433e044b2bbde3b34947ab,
         type: 3}

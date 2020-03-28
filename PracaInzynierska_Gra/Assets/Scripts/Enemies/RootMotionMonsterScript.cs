@@ -9,10 +9,12 @@ public class RootMotionMonsterScript : MonoBehaviour
     Transform player;
     Vector3 destination;
     Animator animator;
+    AudioSource audioSource;
 
     public bool triggered;
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
         animator.speed = 0f;
@@ -27,6 +29,10 @@ public class RootMotionMonsterScript : MonoBehaviour
             if (speedOfRootMotion > 0f)
             {
                 animator.speed = speedOfRootMotion;
+            }
+            if(!audioSource.isPlaying)
+            {
+                audioSource.Play();
             }
         }
         

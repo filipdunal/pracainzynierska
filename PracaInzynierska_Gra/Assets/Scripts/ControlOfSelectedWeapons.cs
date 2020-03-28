@@ -31,13 +31,14 @@ public class ControlOfSelectedWeapons : MonoBehaviour
             lastSwitched.isOn = false;
         }
     }
-    public void TakeSelectedWeapons()
+    public bool TakeSelectedWeapons()
     {
         foreach(Weapon weapon in settingsOfUser.weapons)
         {
             weapon.chosen = false;
         }
-        
+
+        bool atLeastOneWeaponSelected=false;
         foreach(Weapon weapon in settingsOfUser.weapons)
         {
             foreach (Toggle toggle in toggles)
@@ -45,9 +46,11 @@ public class ControlOfSelectedWeapons : MonoBehaviour
                 if(weapon.prefabName==toggle.name && toggle.isOn)
                 {
                     weapon.chosen = true;
+                    atLeastOneWeaponSelected = true;
                     break;
                 }
             }
         }
+        return atLeastOneWeaponSelected;
     }
 }

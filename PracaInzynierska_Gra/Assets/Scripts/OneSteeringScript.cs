@@ -49,6 +49,11 @@ public class OneSteeringScript : MonoBehaviour
         }
     }
 
+    public void SwitchWeapon()
+    {
+        weaponSwitching.NextWeapon();
+    }
+
     public void ForcePause()
     {
         player.activeAimingAndShooting = !player.activeAimingAndShooting;

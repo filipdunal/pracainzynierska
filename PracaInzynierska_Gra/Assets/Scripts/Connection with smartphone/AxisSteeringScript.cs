@@ -14,6 +14,7 @@ public class AxisSteeringScript : MonoBehaviour
     public Vector2 mousePosition;
     public bool shotClick;
     public bool pauseClick;
+    public bool switchWeaponClick;
 
     OneSteeringScript listOfActivities;
 
@@ -32,6 +33,8 @@ public class AxisSteeringScript : MonoBehaviour
             //1 - y
             //2 - shot (1:0)
             //3 - pause (1:0)
+            //4 - switchWeapon (1:0)
+            //5 - randomInt (value matters in NetworkServerUI)
 
             // Optimize this block of code in future
             if (shotClick)                   
@@ -49,11 +52,17 @@ public class AxisSteeringScript : MonoBehaviour
             {
                 listOfActivities.DoPause();
             }
-            
+
+            if (!switchWeaponClick && ((messageValue[4] == "1")))
+            {
+                listOfActivities.SwitchWeapon();
+            }
+
             x = float.Parse(messageValue[0], System.Globalization.CultureInfo.InvariantCulture);
             y = float.Parse(messageValue[1], System.Globalization.CultureInfo.InvariantCulture);
             shotClick = (messageValue[2] == "1");
             pauseClick = (messageValue[3] == "1");
+            switchWeaponClick = (messageValue[4] == "1");
             
             Aim();
         }

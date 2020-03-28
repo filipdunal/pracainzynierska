@@ -36,7 +36,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
   m_Name: Grain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -79,7 +79,7 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.392
+    value: 0.373
   smoothness:
     overrideState: 1
     value: 0.383
@@ -153,11 +153,11 @@ MonoBehaviour:
     overrideState: 1
     value: 15
   aperture:
-    overrideState: 0
-    value: 14.84
+    overrideState: 1
+    value: 5.35
   focalLength:
     overrideState: 1
-    value: 54.3
+    value: 135.9
   kernelSize:
     overrideState: 1
     value: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b77c5407dc277943b591ade9e6b18c5, type: 3}
   m_Name: LensDistortion
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -321,10 +321,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.46
+    value: 2.09
   threshold:
     overrideState: 1
-    value: 0.18
+    value: 0.2
   softKnee:
     overrideState: 0
     value: 1
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6050e2d5de785ce4d931e4dbdbf2d755, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -429,31 +429,31 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: -21.4
+    value: -23.5
   tint:
     overrideState: 0
     value: 40.8
   colorFilter:
     overrideState: 0
-    value: {r: 1, g: 0.62671614, b: 0, a: 1}
+    value: {r: 0.48584908, g: 1, b: 0.6160179, a: 1}
   hueShift:
     overrideState: 0
-    value: 2
+    value: -16
   saturation:
     overrideState: 0
-    value: -100
+    value: 26.7
   brightness:
     overrideState: 0
     value: 0
   postExposure:
     overrideState: 1
-    value: 2
+    value: 1.5
   contrast:
     overrideState: 0
-    value: 47.2
+    value: 100
   mixerRedOutRedIn:
     overrideState: 0
-    value: 146
+    value: 69
   mixerRedOutGreenIn:
     overrideState: 0
     value: 0

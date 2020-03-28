@@ -14,6 +14,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Arena chapter01.unity
     guid: af2b457054805c046ac767b9e3887ab3
+  - enabled: 1
+    path: Assets/Scenes/Arena chapter02.unity
+    guid: 981b648c4c644a047a8431e45596288d
+  - enabled: 1
+    path: Assets/Scenes/Arena chapter03.unity
+    guid: e1e4d98712840b64f8332108ad79435d
+  - enabled: 1
+    path: Assets/Scenes/Arena chapter04.unity
+    guid: 859445b83755b4c469e183e8bc881d07
   - enabled: 0
     path: Assets/Scenes/playingSceneTemplate.unity
     guid: 245ad0dfb07a213438a56accde0f7e20

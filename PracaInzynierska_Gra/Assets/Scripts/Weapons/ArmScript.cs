@@ -5,6 +5,7 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class ArmScript : MonoBehaviour
 {
+    public float maxFocusDistance=20f;
     WeaponSwitching weaponSwitching;
     [HideInInspector] public Transform targetObject;
     [HideInInspector] public Vector3 targetPoint;
@@ -20,8 +21,8 @@ public class ArmScript : MonoBehaviour
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         cam = GameObject.Find("Camera").GetComponent<Camera>();
 
-        
-        postProcessVolume = FindObjectOfType<PostProcessVolume>();
+
+        postProcessVolume = GameObject.Find("Post Processing Volume").GetComponent<PostProcessVolume>();
         postProcessVolume.profile.TryGetSettings(out depthOfField);
     }
     private void Update()
@@ -43,12 +44,19 @@ public class ArmScript : MonoBehaviour
         }
         transform.LookAt(targetPoint);
         SetFocus();
-        Debug.Log(depthOfField.focusDistance.value);
+        //Debug.Log(depthOfField.focusDistance.value);
 
     }
 
     void SetFocus()
     {
-        depthOfField.focusDistance.value = hitDistance;
+        if(hitDistance > maxFocusDistance)
+        {
+            depthOfField.focusDistance.value = maxFocusDistance;
+        }
+        else
+        {
+            depthOfField.focusDistance.value = hitDistance;
+        }
     }
 }

@@ -13,8 +13,11 @@ public class NetworkClientUI : MonoBehaviour
     public InputField serverPort;
     public Text result;
     public Text connectedOrNot;
+    public Image connectedOrNotBackground;
     public Button connectButton;
     public Button disconnectButton;
+    public Color notConnectedButtonColor;
+    public Color connectedButtonColor;
 
     static NetworkClient client;
     public static bool isConnected;
@@ -24,7 +27,7 @@ public class NetworkClientUI : MonoBehaviour
         {
             connectButton.interactable = false;
             disconnectButton.interactable = true;
-            connectedOrNot.color = Color.green;
+            connectedOrNotBackground.color = connectedButtonColor;
             connectedOrNot.text = "Connected";
             isConnected = true;
         }
@@ -32,7 +35,7 @@ public class NetworkClientUI : MonoBehaviour
         {
             connectButton.interactable = true;
             disconnectButton.interactable = false;
-            connectedOrNot.color = Color.red;
+            connectedOrNotBackground.color = notConnectedButtonColor;
             connectedOrNot.text = "Not connected";
             isConnected = false;
         }

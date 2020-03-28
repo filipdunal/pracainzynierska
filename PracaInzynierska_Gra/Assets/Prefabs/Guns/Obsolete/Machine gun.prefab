@@ -196,6 +196,7 @@ MonoBehaviour:
   ammoClipsLeft: 0
   fireRate: 15
   damageOfBullet: 30
+  range: 30
   recoilDistance: 0.5
   recoilForce: 70
   recoilGoingBackForce: 5
@@ -215,7 +216,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.584
   m_Pitch: 1
   Loop: 0
   Mute: 0

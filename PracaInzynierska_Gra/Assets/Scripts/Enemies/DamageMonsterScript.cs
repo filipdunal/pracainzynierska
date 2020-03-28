@@ -9,18 +9,25 @@ public class DamageMonsterScript : MonoBehaviour
     public int health;
     int maxHealth;
 
+    [Header("Audio clips")]
+    public List<AudioClip> hurtSounds;
+    AudioSource audioSource;
+
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         maxHealth = health;
     }
     public void TakeDamage(int strength)
     {
         health -= strength;
         DoParticle();
+        audioSource.PlayOneShot(hurtSounds[(int)Random.Range(0f, hurtSounds.Capacity - 1)]);
         if (health <= 0)
         {
-            Die();
+            Die();  
         }
+        
     }
     void Die()
     {

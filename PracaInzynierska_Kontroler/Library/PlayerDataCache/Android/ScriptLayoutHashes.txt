@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Filip/Documents/Praca inzynierska builds/Kontroler18.apk
+C:/Users/Filip/Documents/Praca inzynierska builds/StayCalmController.apk
 SceneListBegin?
 Assets/Scenes/controller.unity
 SceneListEnd?
@@ -147,7 +147,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 d6a4e1b2476cfc400f0803dc60e7e98c Assembly-CSharp.dll:.PanelMainOpener
 35a9693c388776aaf487636491a20f11 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e1300922cc039f41ab46a47f4cb05898 Unity.TextMeshPro.dll:TMPro.TMP_Settings
-167dee40a2e204c217e8a215309103d7 Assembly-CSharp.dll:.NetworkClientUI
+84ce08c260ab5f3decc5f794be2c2dc3 Assembly-CSharp.dll:.NetworkClientUI
 88cc9df3c6fc697bfbeacd24c0d6f2d7 UnityEngine.TestRunner.dll:UnityEngine.TestTools.BeforeAfterTestCommandState
 88cc9df3c6fc697bfbeacd24c0d6f2d7 UnityEngine.TestRunner.dll:UnityEngine.TestTools.EnumerableSetUpTearDownCommandState
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback

@@ -38,7 +38,13 @@ public class GoToNextWaypoint : MonoBehaviour
                     moving.SetSpeed(speed);
                 }
             }
-            
+
+            ShowInfoOnEnter info = GetComponent<ShowInfoOnEnter>();
+            if (info != null)
+            {
+                FindObjectOfType<InfoSystem>().ShowMessage(info.message, info.time, info.color);
+            }
+
         }
     }
 

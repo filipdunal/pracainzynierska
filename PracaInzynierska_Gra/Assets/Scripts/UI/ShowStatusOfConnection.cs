@@ -11,6 +11,7 @@ public class ShowStatusOfConnection : MonoBehaviour
     public Button thisButton;
     public Text buttonText;
     Image buttonImage;
+    
     private void Start()
     {
         buttonImage = thisButton.GetComponent<Image>();

@@ -28,6 +28,7 @@ public class WeaponScript : MonoBehaviour
     [Header("Bullet values")]
     public float fireRate = 15f;
     public int damageOfBullet = 30;
+    public float range=30f;
 
     float nextTimeToFire = 0f;
 
@@ -90,7 +91,11 @@ public class WeaponScript : MonoBehaviour
                 
                 if (armScript.targetObject != null && armScript.targetObject.tag == "Monster")
                 {
-                    armScript.targetObject.GetComponent<DamageMonsterScript>().TakeDamage(damageOfBullet);
+                    Debug.Log(Vector3.Distance(transform.position, armScript.targetObject.position));
+                    if(Vector3.Distance(transform.position,armScript.targetObject.position)<range)
+                    {
+                        armScript.targetObject.GetComponent<DamageMonsterScript>().TakeDamage(damageOfBullet);
+                    }
                     
                 }
 

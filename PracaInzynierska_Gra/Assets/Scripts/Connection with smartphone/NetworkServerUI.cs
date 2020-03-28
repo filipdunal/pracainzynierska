@@ -15,16 +15,22 @@ public class NetworkServerUI : MonoBehaviour
     //Received data from mobile phone 
     public static string receivedString;
 
+    static float desiredTimeOutValue = 5f;
+    static float timeOutValue = 5f;
+
     private void OnGUI()
     {
+        /*
         //Only for testing
         ipaddress = LocalIPAddress();
         GUI.Box(new Rect(10, Screen.height - 50, 100, 50), ipaddress);
         GUI.Label(new Rect(20, Screen.height - 35, 100, 20), "Status:" + NetworkServer.active);
         GUI.Label(new Rect(20, Screen.height - 20, 100, 20), "Connected:" + NetworkServer.connections.Count);
+        */
     }
     private void Start()
     {
+        timeOutValue = desiredTimeOutValue;
         ipaddress = LocalIPAddress();
         if (!NetworkServer.active)
         {
@@ -48,6 +54,18 @@ public class NetworkServerUI : MonoBehaviour
             {
                 Start();
             }
+            else
+            {
+                if(NetworkServer.connections.Count!=0)
+                {
+                    timeOutValue -= Time.unscaledDeltaTime;
+                    if (timeOutValue < 0f)
+                    {
+                        NetworkServer.Reset();
+                        timeOutValue = desiredTimeOutValue;
+                    }
+                } 
+            }
         }
     }
 
@@ -68,11 +86,16 @@ public class NetworkServerUI : MonoBehaviour
             NetworkServer.RegisterHandler(999, ServerReceiveMessage);
         }
     }
+    
     private static void ServerReceiveMessage(NetworkMessage message)
     {
         StringMessage messg = new StringMessage();
         messg.value = message.ReadMessage<StringMessage>().value;
         string data = messg.value;
+        if(data!=receivedString)
+        {
+            timeOutValue = desiredTimeOutValue;
+        }
         receivedString = data;
     }
 
