@@ -29,7 +29,7 @@ public class DamageMonsterScript : MonoBehaviour
         }
         
     }
-    void Die()
+    public void Die()
     {
         transform.position = new Vector3(0, 1000, 0);
         StartCoroutine(DestroyMeNextFrame());

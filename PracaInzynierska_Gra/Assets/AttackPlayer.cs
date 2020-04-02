@@ -9,7 +9,8 @@ public class AttackPlayer : MonoBehaviour
         if (other.tag == "Player")
         {
             other.gameObject.GetComponent<Player>().TakeDamage(GetComponentInParent<DamageMonsterScript>().attackStrength);
-            Destroy(transform.parent.gameObject);
+            transform.parent.GetComponent<DamageMonsterScript>().Die();
+            //Destroy(transform.parent.gameObject);
         }
     }
 }

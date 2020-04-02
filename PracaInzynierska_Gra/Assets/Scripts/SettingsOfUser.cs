@@ -100,7 +100,7 @@ public class SettingsOfUser : MonoBehaviour
                 
             }
         }
-        return null;
+        return "";
     }
 
     public string GetNameOfUnclockedWeapon()
@@ -110,10 +110,16 @@ public class SettingsOfUser : MonoBehaviour
         {
             if (scene.name == ch.fileName)
             {
-                return ch.passingUnlocksWeapon;
+                foreach(Weapon weap in weapons)
+                {
+                    if(ch.passingUnlocksWeapon==weap.prefabName)
+                    {
+                        return weap.name;
+                    }
+                }
             }
         }
-        return null;
+        return "";
     }
 
     void UnlockNextChapter(string title)

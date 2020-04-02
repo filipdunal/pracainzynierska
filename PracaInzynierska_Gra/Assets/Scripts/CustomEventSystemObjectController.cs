@@ -8,6 +8,7 @@ public class CustomEventSystemObjectController : MonoBehaviour
     [HideInInspector] public static CustomEventSystemObjectController instance;
     void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         //if we don't have an [_instance] set yet
         if (!instance)
         {

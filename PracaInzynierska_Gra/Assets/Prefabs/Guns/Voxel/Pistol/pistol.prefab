@@ -129,7 +129,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   typeOfWeapon: 1
   ammoClipCapacity: 8
-  ammoClipsStartAmount: 7
+  ammoClipsStartAmount: 16
   ammoCurrentInClip: 0
   ammoClipsLeft: 0
   fireRate: 5

@@ -10868,27 +10868,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8432368653837674718, guid: 485fce8875a25ff4f98003d793989798,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: cadf98212aad3424985596478108492b,
-        type: 3}
-    - target: {fileID: 8432368653837674718, guid: 485fce8875a25ff4f98003d793989798,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8432368653837674718, guid: 485fce8875a25ff4f98003d793989798,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8432368653837674718, guid: 485fce8875a25ff4f98003d793989798,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8432368653143320329, guid: 485fce8875a25ff4f98003d793989798,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
