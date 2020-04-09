@@ -10,7 +10,6 @@ public class AttackPlayer : MonoBehaviour
         {
             other.gameObject.GetComponent<Player>().TakeDamage(GetComponentInParent<DamageMonsterScript>().attackStrength);
             transform.parent.GetComponent<DamageMonsterScript>().Die();
-            //Destroy(transform.parent.gameObject);
         }
     }
 }

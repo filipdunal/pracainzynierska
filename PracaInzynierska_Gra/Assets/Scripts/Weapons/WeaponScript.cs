@@ -96,10 +96,7 @@ public class WeaponScript : MonoBehaviour
                     {
                         armScript.targetObject.GetComponent<DamageMonsterScript>().TakeDamage(damageOfBullet);
                     }
-                    
                 }
-
-                //StopAllCoroutines();
                 StopCoroutine(DoRecoil());
                 StartCoroutine(DoRecoil());
 
@@ -108,11 +105,8 @@ public class WeaponScript : MonoBehaviour
             else
             {
                 StartReloading();
-            }
-            
+            }   
         }
-
-
     }
     IEnumerator DoRecoil()
     {
