@@ -1,3 +1,6 @@
+# "Let's play" video
+https://www.youtube.com/watch?v=xua2Nnyz4GQ&t=0s
+
 # Short presentation: 
 https://drive.google.com/file/d/1uTqlLmV7wT9nTpFyuqamNey10h5AMwIt/view?usp=sharing
 
